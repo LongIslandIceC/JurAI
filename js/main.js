@@ -140,6 +140,69 @@ const debouncedHighlight = debounce(highlightNavigation, 10);
 window.addEventListener('scroll', debouncedHighlight);
 
 // ===================================
+// Apple-style Parallax Scroll Effects
+// ===================================
+function appleParallaxEffect() {
+    const scrolled = window.pageYOffset;
+
+    // Parallax effect for background dunes
+    const bodyAfter = document.querySelector('body');
+    if (bodyAfter) {
+        bodyAfter.style.setProperty('--scroll-position', scrolled * 0.5 + 'px');
+    }
+
+    // Fade and scale effect for hero on scroll
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        const heroHeight = hero.offsetHeight;
+        const scrollPercent = Math.min(scrolled / heroHeight, 1);
+        const opacity = 1 - scrollPercent * 0.8;
+        const scale = 1 - scrollPercent * 0.1;
+
+        hero.style.opacity = opacity;
+        hero.style.transform = `scale(${scale})`;
+    }
+
+    // Subtle parallax for sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop;
+        const sectionScroll = scrolled - sectionTop;
+
+        if (sectionScroll > -window.innerHeight && sectionScroll < window.innerHeight) {
+            const speed = 0.1 + (index * 0.05);
+            const yPos = -(sectionScroll * speed);
+            section.style.transform = `translateY(${yPos}px)`;
+        }
+    });
+
+    // Service cards stagger effect
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach((card, index) => {
+        const cardTop = card.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (cardTop < windowHeight * 0.8) {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+            card.style.transitionDelay = `${index * 0.1}s`;
+        }
+    });
+}
+
+// Smooth scroll with RAF for better performance
+let ticking = false;
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            appleParallaxEffect();
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
+// ===================================
 // Initialize on DOM Load
 // ===================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -152,4 +215,15 @@ document.addEventListener('DOMContentLoaded', () => {
             heroContent.classList.add('fade-in-up');
         }, 100);
     }
+
+    // Initialize parallax
+    appleParallaxEffect();
+
+    // Set initial state for service cards
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    });
 });
