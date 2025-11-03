@@ -356,57 +356,6 @@ section {
     margin-bottom: 0;
 }
 
-.about-intro {
-    font-size: var(--font-size-lg);
-    line-height: 1.6;
-    margin-bottom: var(--spacing-lg) !important;
-}
-
-.about-highlights {
-    display: grid;
-    gap: var(--spacing-md);
-    margin: var(--spacing-lg) 0;
-}
-
-.highlight-item {
-    display: flex;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-md);
-    background: var(--color-bg-light);
-    border-radius: 12px;
-    border: 1px solid var(--color-border);
-    transition: var(--transition);
-}
-
-.highlight-item:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-}
-
-.highlight-icon {
-    font-size: 2.5rem;
-    line-height: 1;
-    flex-shrink: 0;
-}
-
-.highlight-content h3 {
-    font-size: var(--font-size-lg);
-    color: var(--color-accent);
-    margin-bottom: var(--spacing-xs);
-}
-
-.highlight-content p {
-    margin: 0;
-    font-size: var(--font-size-sm);
-    line-height: 1.6;
-}
-
-.about-closing {
-    font-size: var(--font-size-md);
-    line-height: 1.7;
-    margin-top: var(--spacing-lg) !important;
-}
-
 /* ===================================
    Expertise Section
    =================================== */
@@ -493,12 +442,6 @@ section {
 .service-card.featured {
     border-color: var(--color-accent);
     border-width: 2px;
-}
-
-.service-icon {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-sm);
-    display: block;
 }
 
 .service-header {
