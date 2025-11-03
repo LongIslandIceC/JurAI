@@ -132,10 +132,17 @@ a:hover {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
     font-size: var(--font-size-lg);
     font-weight: 700;
     color: var(--color-primary);
     letter-spacing: -0.02em;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
 }
 
 .nav-links {
