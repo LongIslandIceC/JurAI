@@ -14,12 +14,12 @@
     --color-bg-dark: #f3f4f6;
     --color-border: #e5e7eb;
 
-    /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 4rem;
-    --spacing-xl: 6rem;
+    /* Spacing - More generous for minimalist look */
+    --spacing-xs: 0.75rem;
+    --spacing-sm: 1.5rem;
+    --spacing-md: 3rem;
+    --spacing-lg: 6rem;
+    --spacing-xl: 8rem;
 
     /* Typography */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -300,10 +300,59 @@ section {
     letter-spacing: -0.02em;
 }
 
+.section-title.center {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
 .section-description {
     font-size: var(--font-size-md);
     color: var(--color-text-light);
     line-height: 1.7;
+}
+
+/* ===================================
+   About Section - Modernized
+   =================================== */
+.about {
+    background-color: var(--color-bg);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-intro .subtitle {
+    font-size: var(--font-size-md);
+    color: var(--color-text-light);
+    margin-top: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+.about-details {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.detail-item h3 {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-xs);
+}
+
+.detail-item p {
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+    line-height: 1.7;
+    margin: 0;
 }
 
 /* ===================================
@@ -375,182 +424,120 @@ section {
 .service-card {
     position: relative;
     background-color: white;
-    padding: var(--spacing-lg);
-    border-radius: 16px;
-    border: 2px solid var(--color-border);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    gap: var(--spacing-sm);
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
     border-color: var(--color-accent);
+    box-shadow: var(--shadow-sm);
 }
 
 .service-card.featured {
     border-color: var(--color-accent);
-    background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+    border-width: 2px;
 }
 
-.featured-badge {
-    position: absolute;
-    top: -12px;
-    right: var(--spacing-md);
-    background-color: var(--color-accent);
-    color: white;
-    padding: 0.375rem 1rem;
-    border-radius: 20px;
-    font-size: var(--font-size-xs);
-    font-weight: 600;
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
 }
 
 .service-number {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     font-weight: 700;
     color: var(--color-accent);
-    margin-bottom: var(--spacing-sm);
+    min-width: 2rem;
 }
 
-.service-title {
+.service-header h3 {
     font-size: var(--font-size-lg);
-    font-weight: 700;
-    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
     color: var(--color-primary);
+    margin: 0;
 }
 
 .service-description {
     color: var(--color-text-light);
-    margin-bottom: var(--spacing-md);
-    line-height: 1.6;
-}
-
-.service-details {
-    flex-grow: 1;
-    margin-bottom: var(--spacing-md);
-}
-
-.service-details h4 {
     font-size: var(--font-size-sm);
-    font-weight: 600;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-primary);
+    line-height: 1.6;
+    margin: 0;
 }
 
-.service-details ul {
-    list-style: none;
-    margin-left: 0;
-}
-
-.service-details li {
-    padding-left: 1.5rem;
-    position: relative;
-    margin-bottom: 0.5rem;
-    color: var(--color-text-light);
-    line-height: 1.5;
-}
-
-.service-details li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--color-accent);
-    font-weight: 700;
-}
-
-.service-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: var(--spacing-md);
+.service-deliverable {
+    color: var(--color-text);
+    font-size: var(--font-size-xs);
+    line-height: 1.6;
+    padding-top: var(--spacing-sm);
     border-top: 1px solid var(--color-border);
     margin-top: auto;
 }
 
-.service-format {
-    font-size: var(--font-size-xs);
-    color: var(--color-text-light);
-}
-
 .service-price {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
     font-weight: 700;
     color: var(--color-primary);
+    margin-top: var(--spacing-xs);
 }
 
 /* ===================================
-   Kontakt Section
+   Kontakt Section - Minimalist
    =================================== */
 .kontakt {
-    background-color: var(--color-bg-light);
+    background-color: var(--color-bg);
 }
 
-.kontakt-content {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: var(--spacing-xl);
-    align-items: start;
+.kontakt-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.kontakt-info {
-    position: sticky;
-    top: calc(60px + var(--spacing-md));
+.kontakt-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
 }
 
-.kontakt-details {
-    margin-top: var(--spacing-lg);
+.kontakt-header .section-title {
+    margin-bottom: var(--spacing-sm);
 }
 
-.kontakt-item {
-    display: flex;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-md);
+.kontakt-email {
+    font-size: var(--font-size-md);
+    margin: 0;
 }
 
-.kontakt-icon {
-    width: 24px;
-    height: 24px;
-    stroke-width: 2;
+.kontakt-email a {
     color: var(--color-accent);
-    flex-shrink: 0;
+    text-decoration: none;
+    transition: var(--transition);
 }
 
-.kontakt-item h4 {
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-    color: var(--color-primary);
-}
-
-.kontakt-item a {
-    color: var(--color-text-light);
-    font-size: var(--font-size-sm);
-}
-
-.kontakt-form-wrapper {
-    background-color: white;
-    padding: var(--spacing-lg);
-    border-radius: 16px;
-    box-shadow: var(--shadow-md);
+.kontakt-email a:hover {
+    color: var(--color-accent-light);
 }
 
 .kontakt-form {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-}
-
-.form-group label {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--color-primary);
-    font-size: var(--font-size-sm);
 }
 
 .form-group input,
@@ -672,17 +659,17 @@ section {
         width: 100%;
     }
 
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
     }
 
-    .kontakt-content {
+    .form-row {
         grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-    }
-
-    .kontakt-info {
-        position: static;
     }
 
     .footer-content {
@@ -707,11 +694,7 @@ section {
     }
 
     .service-card {
-        padding: var(--spacing-md);
-    }
-
-    .kontakt-form-wrapper {
-        padding: var(--spacing-md);
+        padding: var(--spacing-sm);
     }
 }
 
