@@ -312,47 +312,41 @@ section {
 }
 
 /* ===================================
-   About Section - Modernized
+   About Section
    =================================== */
 .about {
     background-color: var(--color-bg);
 }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: var(--spacing-xl);
-    align-items: start;
-    max-width: 1100px;
+.about-content {
+    max-width: 800px;
     margin: 0 auto;
+    text-align: center;
 }
 
-.about-intro .subtitle {
-    font-size: var(--font-size-md);
-    color: var(--color-text-light);
-    margin-top: var(--spacing-sm);
-    line-height: 1.6;
-}
-
-.about-details {
-    display: grid;
-    gap: var(--spacing-lg);
-}
-
-.detail-item h3 {
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-accent);
+.about-content .section-title {
     margin-bottom: var(--spacing-xs);
 }
 
-.detail-item p {
+.about-content .subtitle {
     font-size: var(--font-size-md);
-    color: var(--color-text);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-text p {
+    font-size: var(--font-size-md);
     line-height: 1.7;
-    margin: 0;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
 }
 
 /* ===================================
@@ -657,11 +651,6 @@ section {
 
     .hero-cta .btn {
         width: 100%;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
     }
 
     .services-grid {
