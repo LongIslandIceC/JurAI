@@ -131,7 +131,7 @@ if (kontaktForm) {
 
         } catch (error) {
             // Show error message
-            showFormMessage('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder senden Sie eine E-Mail direkt an kontakt@jur-ai.de', 'error');
+            showFormMessage('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder senden Sie eine E-Mail direkt an [DEINE-EMAIL-ADRESSE]', 'error');
         } finally {
             // Reset button
             submitButton.textContent = originalText;
