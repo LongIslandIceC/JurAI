@@ -2,17 +2,17 @@
    CSS Variables & Reset
    =================================== */
 :root {
-    /* Colors - Dark Sand Dune Theme */
-    --color-primary: #ffffff;
-    --color-primary-light: #e5e5e5;
-    --color-accent: #06b6d4;
-    --color-accent-light: #0891b2;
-    --color-text: #e5e5e5;
-    --color-text-light: #a0a0a0;
-    --color-bg: #1a1a1a;
-    --color-bg-light: #2a2a2a;
-    --color-bg-dark: #0a0a0a;
-    --color-border: #404040;
+    /* Colors - Modern Sand/Grey Palette */
+    --color-primary: #2c2c2c;
+    --color-primary-light: #4a4a4a;
+    --color-accent: #8b7355;
+    --color-accent-light: #a68968;
+    --color-text: #2c2c2c;
+    --color-text-light: #6b6b6b;
+    --color-bg: #faf8f6;
+    --color-bg-light: #f5f3f0;
+    --color-bg-dark: #e8e6e3;
+    --color-border: #d4d2cf;
 
     /* Spacing - More generous for minimalist look */
     --spacing-xs: 0.75rem;
@@ -59,42 +59,6 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    position: relative;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    background:
-        radial-gradient(ellipse 100% 60% at 50% 0%, rgba(60, 60, 60, 0.3) 0%, transparent 60%),
-        radial-gradient(ellipse 80% 50% at 80% 40%, rgba(40, 40, 40, 0.25) 0%, transparent 60%),
-        radial-gradient(ellipse 90% 60% at 20% 70%, rgba(50, 50, 50, 0.2) 0%, transparent 60%),
-        linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 30%, #3a3a3a 60%, #4a4a4a 100%);
-}
-
-body::after {
-    content: '';
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 70%;
-    z-index: -1;
-    background:
-        url("data:image/svg+xml,%3Csvg width='200' height='120' viewBox='0 0 200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 60 Q 50 30, 100 60 T 200 60 L 200 120 L 0 120 Z' fill='%23000000' opacity='0.15'/%3E%3C/svg%3E"),
-        url("data:image/svg+xml,%3Csvg width='300' height='160' viewBox='0 0 300 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 80 Q 75 40, 150 80 T 300 80 L 300 160 L 0 160 Z' fill='%231a1a1a' opacity='0.2'/%3E%3C/svg%3E"),
-        url("data:image/svg+xml,%3Csvg width='400' height='200' viewBox='0 0 400 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 100 Q 100 50, 200 100 T 400 100 L 400 200 L 0 200 Z' fill='%232a2a2a' opacity='0.25'/%3E%3C/svg%3E"),
-        linear-gradient(0deg, rgba(20, 20, 20, 0.4) 0%, transparent 100%);
-    background-size: 250px 120px, 350px 160px, 500px 200px, 100% 100%;
-    background-position: 0 bottom, 150px bottom, 300px bottom, center;
-    background-repeat: repeat-x, repeat-x, repeat-x, no-repeat;
-    transform: translateZ(0);
-    will-change: transform;
 }
 
 /* ===================================
@@ -177,7 +141,7 @@ a:hover {
 }
 
 .logo-image {
-    height: 80px;
+    height: 50px;
     width: auto;
 }
 
