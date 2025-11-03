@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" fill="none">
+  <!-- Basiert auf Ihrem favicon.png Design: verschlungenes "Ai" -->
+
+  <!-- J (unterer Teil des A/verschlungen) -->
+  <path d="M 40 20 L 40 90 Q 40 110 60 110 L 70 110"
+        stroke="#0891b2"
+        stroke-width="16"
+        stroke-linecap="round"
+        fill="none"/>
+
+  <!-- A (Hauptbuchstabe) -->
+  <path d="M 80 110 L 110 20 L 140 110"
+        stroke="#0891b2"
+        stroke-width="16"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"/>
+
+  <!-- A Querbalken -->
+  <line x1="90" y1="75" x2="130" y2="75"
+        stroke="#06b6d4"
+        stroke-width="14"
+        stroke-linecap="round"/>
+
+  <!-- i Punkt -->
+  <circle cx="165" cy="20" r="9" fill="#06b6d4"/>
+
+  <!-- i Strich -->
+  <line x1="165" y1="45" x2="165" y2="110"
+        stroke="#0891b2"
+        stroke-width="16"
+        stroke-linecap="round"/>
+
+  <!-- Verbindungselement/verschlungen -->
+  <path d="M 70 75 Q 85 65 100 75"
+        stroke="#06b6d4"
+        stroke-width="3"
+        fill="none"
+        opacity="0.5"/>
+</svg>
