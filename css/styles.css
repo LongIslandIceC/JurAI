@@ -342,15 +342,14 @@ section {
 }
 
 .about-layout {
-    display: grid;
-    grid-template-columns: 1fr 120px;
+    display: flex;
+    flex-direction: column;
     gap: var(--spacing-lg);
-    align-items: start;
-    text-align: left;
 }
 
 .about-image {
-    order: 2;
+    width: 150px;
+    margin: 0 auto;
 }
 
 .about-image img {
@@ -363,7 +362,6 @@ section {
 
 .about-text {
     text-align: left;
-    order: 1;
 }
 
 .about-text p {
@@ -378,19 +376,8 @@ section {
 }
 
 @media (max-width: 768px) {
-    .about-layout {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-    }
-
     .about-image {
-        order: 1;
-        max-width: 100px;
-        margin: 0 auto;
-    }
-
-    .about-text {
-        order: 2;
+        width: 120px;
     }
 }
 
