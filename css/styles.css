@@ -343,7 +343,7 @@ section {
 
 .about-layout {
     display: grid;
-    grid-template-columns: 1fr 180px;
+    grid-template-columns: 1fr 120px;
     gap: var(--spacing-lg);
     align-items: start;
     text-align: left;
@@ -385,7 +385,7 @@ section {
 
     .about-image {
         order: 1;
-        max-width: 150px;
+        max-width: 100px;
         margin: 0 auto;
     }
 
