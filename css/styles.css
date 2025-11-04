@@ -343,26 +343,27 @@ section {
 
 .about-layout {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 1fr 180px;
     gap: var(--spacing-lg);
     align-items: start;
     text-align: left;
 }
 
 .about-image {
-    position: sticky;
-    top: 100px;
+    order: 2;
 }
 
 .about-image img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
-    box-shadow: var(--shadow-md);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    opacity: 0.95;
 }
 
 .about-text {
     text-align: left;
+    order: 1;
 }
 
 .about-text p {
@@ -383,10 +384,13 @@ section {
     }
 
     .about-image {
-        position: relative;
-        top: 0;
-        max-width: 250px;
+        order: 1;
+        max-width: 150px;
         margin: 0 auto;
+    }
+
+    .about-text {
+        order: 2;
     }
 }
 
