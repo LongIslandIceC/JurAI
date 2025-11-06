@@ -143,6 +143,8 @@ a:hover {
 .logo-image {
     height: 50px;
     width: auto;
+    background: transparent;
+    mix-blend-mode: multiply;
 }
 
 .nav-links {
