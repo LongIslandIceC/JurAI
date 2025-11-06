@@ -353,6 +353,9 @@ section {
     width: 280px;
     height: 280px;
     flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .about-image img {
@@ -360,9 +363,7 @@ section {
     height: 100%;
     object-fit: cover;
     object-position: center 15%;
-    border-radius: 50%;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    transform: scale(0.85);
+    transform: scale(0.80);
 }
 
 .about-text {
