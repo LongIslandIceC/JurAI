@@ -350,8 +350,8 @@ section {
 }
 
 .about-image {
-    width: 64px;
-    height: 64px;
+    width: 90px;
+    height: 90px;
     flex-shrink: 0;
 }
 
@@ -385,8 +385,8 @@ section {
     }
 
     .about-image {
-        width: 56px;
-        height: 56px;
+        width: 72px;
+        height: 72px;
     }
 }
 
