@@ -1,7 +1,7 @@
 /* ===================================
    CSS Variables & Reset
    =================================== */
-:root {
+   :root {
     /* Colors - Modern Sand/Grey Palette */
     --color-primary: #2c2c2c;
     --color-primary-light: #4a4a4a;
@@ -144,7 +144,8 @@ a:hover {
     height: 50px;
     width: auto;
     background: transparent;
-    mix-blend-mode: multiply;
+    filter: contrast(1.2) saturate(1.5);
+    mix-blend-mode: darken;
 }
 
 .nav-links {
@@ -250,8 +251,16 @@ a:hover {
     max-width: 900px;
 }
 
+.hero-company {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 0.1em;
+}
+
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: var(--spacing-md);
@@ -277,6 +286,15 @@ a:hover {
     display: flex;
     gap: var(--spacing-sm);
     flex-wrap: wrap;
+}
+
+.hero-meta {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 /* ===================================
@@ -334,12 +352,24 @@ section {
 
 .about-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     margin-bottom: var(--spacing-lg);
     text-align: center;
 }
 
+.about-content .section-title {
+    margin-bottom: var(--spacing-xs);
+    text-align: center;
+}
+
+.about-content .subtitle {
+    font-size: var(--font-size-md);
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+/* (Original duplication preserved – no functional change) */
 .about-content .section-title {
     margin-bottom: var(--spacing-xs);
     text-align: center;
@@ -361,7 +391,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 15%;
+    object-position: center;
     border-radius: 50%;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
@@ -381,6 +411,199 @@ section {
     margin-bottom: 0;
 }
 
+/* Team Header */
+.team-header {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.team-photos {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.team-photo {
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.team-photo img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Wrapper (your HTML uses it) */
+.team-photo-wrapper {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Ensure wrapper images ALWAYS fill the circle (prevents white borders) */
+.team-photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Keep your “first child special handling” but repaired */
+.team-photo:first-child .team-photo-wrapper {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* REPAIRED: missing semicolon after margin: 0; */
+.team-photo:first-child img {
+    width: 220px;
+    height: 220px;
+    object-position: center 10%;
+    object-fit: cover;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.team-photo:last-child img {
+    object-position: center 45%;
+}
+
+.photo-caption h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-primary);
+}
+
+.photo-caption p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+/* Team Members */
+.team-members {
+    margin-top: var(--spacing-lg);
+}
+
+.team-member {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.team-member:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.member-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.member-header h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-primary);
+}
+
+.member-title {
+    font-size: var(--font-size-md);
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.member-image {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.member-text {
+    text-align: left;
+}
+
+.member-text p {
+    font-size: var(--font-size-md);
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.member-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Our Perspective */
+.our-perspective {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 2px solid var(--color-accent);
+}
+
+.our-perspective h3 {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.our-perspective p {
+    font-size: var(--font-size-md);
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+/* Lists in about text */
+.about-text ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-md) 0;
+}
+
+.about-text li {
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-md);
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+.about-text li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
 @media (max-width: 768px) {
     .about-header {
         flex-direction: column;
@@ -390,6 +613,17 @@ section {
     .about-image {
         width: 180px;
         height: 180px;
+    }
+
+    .member-header {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+
+    .member-image {
+        width: 160px;
+        height: 160px;
     }
 }
 
@@ -452,6 +686,21 @@ section {
 /* ===================================
    Leistungen Section
    =================================== */
+
+/* ADDITION (no HTML change needed):
+   This draws the same “accent line” between "Unser Ansatz" and "Leistungen",
+   by placing a divider at the top of the Leistungen section. */
+.leistungen::before {
+    content: "";
+    display: block;
+    width: min(900px, 85%);
+    height: 2px;
+    background-color: var(--color-accent);
+    margin: 0 auto var(--spacing-lg);
+    opacity: 0.8;
+}
+
+/* Original grid/cards */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -523,6 +772,47 @@ section {
     font-weight: 700;
     color: var(--color-primary);
     margin-top: var(--spacing-xs);
+}
+
+.service-deliverables {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-sm) 0;
+}
+
+.service-deliverables li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-xs);
+    line-height: 1.5;
+    color: var(--color-text-light);
+}
+
+.service-deliverables li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.service-meta {
+    color: var(--color-text);
+    font-size: var(--font-size-xs);
+    line-height: 1.6;
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-border);
+    margin-top: auto;
+    font-weight: 600;
+}
+
+.services-note {
+    text-align: center;
+    margin-top: var(--spacing-md);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-light);
+    font-style: italic;
 }
 
 /* ===================================
@@ -959,10 +1249,24 @@ a.service-card:hover {
     margin: 0;
 }
 
+.price-medium {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-accent);
+    margin: 0;
+}
+
 .price-details {
     font-size: var(--font-size-sm);
     color: var(--color-text-light);
     margin-top: var(--spacing-sm);
+}
+
+.detail-pricing {
+    background-color: var(--color-bg-light);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-top: var(--spacing-md);
 }
 
 /* CTA Section */
