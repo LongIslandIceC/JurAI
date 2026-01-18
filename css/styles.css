@@ -301,7 +301,7 @@ a:hover {
    Section Styles
    =================================== */
 section {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
 }
 
 .section-header {
@@ -480,7 +480,7 @@ section {
 }
 
 .team-photo:last-child img {
-    object-position: center 45%;
+    object-position: center 65%;
 }
 
 .photo-caption h3 {
@@ -696,7 +696,7 @@ section {
     width: min(900px, 85%);
     height: 2px;
     background-color: var(--color-accent);
-    margin: 0 auto var(--spacing-lg);
+    margin: 0 auto var(--spacing-md);
     opacity: 0.8;
 }
 
