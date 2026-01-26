@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <!-- JurAI - minimalistisch, nur das "A" hat einen Bronze-Querstrich -->
+  <defs>
+    <linearGradient id="bronze" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b7355"/>
+      <stop offset="100%" stop-color="#a68968"/>
+    </linearGradient>
+  </defs>
+  <text x="5" y="30" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="600" letter-spacing="-0.025em" fill="#2c2c2c">JurAI</text>
+  <!-- Bronze Akzent-Linie durch das A -->
+  <line x1="62" y1="22" x2="78" y2="22" stroke="url(#bronze)" stroke-width="3" stroke-linecap="round"/>
+</svg>

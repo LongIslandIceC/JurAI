@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 45" fill="none">
+  <!-- JurAI - With dot accent between Jur and AI -->
+  <text x="5" y="32" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="600" letter-spacing="-0.02em" fill="#2c2c2c">Jur</text>
+  <circle cx="62" cy="28" r="3" fill="#8b7355"/>
+  <text x="72" y="32" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="600" letter-spacing="-0.02em" fill="#8b7355">AI</text>
+</svg>

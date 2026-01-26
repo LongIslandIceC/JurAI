@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 50" fill="none">
+  <defs>
+    <linearGradient id="goldTaupe2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d4b896"/>
+      <stop offset="60%" stop-color="#a8875c"/>
+      <stop offset="100%" stop-color="#6b5a42"/>
+    </linearGradient>
+  </defs>
+  <text x="5" y="38" font-family="Didot, Georgia, serif" font-size="36" font-style="italic" font-weight="400" letter-spacing="-0.01em" fill="url(#goldTaupe2)">JurAI</text>
+</svg>

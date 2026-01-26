@@ -6,13 +6,58 @@
   <meta name="description" content="Legal AI Beratung - Künstliche Intelligenz sicher und compliant in juristische Abläufe integrieren" />
   <title>JurAI - Legal AI Beratung</title>
 
-  <link rel="icon" type="image/png" href="assets/favicon.png?v=2" />
-  <link rel="apple-touch-icon" href="assets/favicon.png?v=2" />
-  <link rel="stylesheet" href="css/styles.css?v=19.0" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="JurAI - Legal AI Beratung" />
+  <meta property="og:description" content="Legal AI Strategy & Enablement für Kanzleien und Rechtsabteilungen. Produktneutral und remote." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://juraiconsulting.com" />
+  <meta property="og:image" content="https://juraiconsulting.com/assets/logo gold-taupe/jai_logo_taupe_transparent.png" />
+
+  <link rel="icon" type="image/png" href="assets/logo gold-taupe/jai_logo_taupe_transparent.png" />
+  <link rel="apple-touch-icon" href="assets/logo gold-taupe/jai_logo_taupe_transparent.png" />
+  <link rel="stylesheet" href="css/styles.css?v=40.0" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "JurAI",
+    "description": "Legal AI Beratung - Unterstützung juristischer Organisationen beim sinnvollen, kontrollierten Einsatz von KI-Systemen",
+    "url": "https://juraiconsulting.com",
+    "logo": "https://juraiconsulting.com/assets/logo gold-taupe/jai_logo_taupe_transparent.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Helene-Weber-Allee 9",
+      "addressLocality": "München",
+      "postalCode": "80637",
+      "addressCountry": "DE"
+    },
+    "email": "hello@juraiconsulting.com",
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Christopher Brennan",
+        "jobTitle": "Legal AI Consultant"
+      },
+      {
+        "@type": "Person",
+        "name": "Sebastian Merkel",
+        "jobTitle": "Co-Founder"
+      }
+    ],
+    "serviceType": ["Legal AI Consulting", "Legal Technology Advisory", "AI Implementation for Law Firms"],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Germany"
+    },
+    "priceRange": "€€€"
+  }
+  </script>
 </head>
 
 <body>
@@ -21,13 +66,37 @@
     <div class="container">
       <div class="nav-content">
         <a href="#home" class="logo">
-          <img src="assets/logo gold-taupe/jai_logo_taupe_transparent.png" alt="JurAI Logo" class="logo-image" />
+          <img src="assets/logo-new3.svg" alt="JurAI" class="logo-text" />
+          <img src="assets/logo gold-taupe/jai_logo_taupe_transparent.png" alt="JurAI" class="logo-icon" />
         </a>
 
         <div class="nav-links">
-          <a href="#about">Über uns</a>
-          <a href="#leistungen">Leistungen</a>
-          <a href="#kontakt" class="cta-button">Kontakt</a>
+          <a href="#about" class="nav-link">
+            <span class="nav-text">Über uns</span>
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </a>
+          <a href="#leistungen" class="nav-link">
+            <span class="nav-text">Leistungen</span>
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="7" width="20" height="13" rx="2" ry="2"/>
+              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+              <line x1="12" y1="12" x2="12" y2="12.01"/>
+              <path d="M2 12h20"/>
+              <rect x="9" y="10" width="6" height="4" rx="0.5"/>
+            </svg>
+          </a>
+          <a href="#kontakt" class="nav-link cta-button">
+            <span class="nav-text">Kontakt</span>
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
         </div>
 
         <button class="mobile-menu-toggle" aria-label="Menü öffnen">
@@ -43,8 +112,6 @@
   <section id="home" class="hero">
     <div class="container">
       <div class="hero-content">
-        <div class="hero-company">JurAI</div>
-
         <h1 class="hero-title">
           Legal AI Strategy & Enablement für Kanzleien und Rechtsabteilungen
         </h1>
@@ -54,7 +121,7 @@
         </p>
 
         <p class="hero-meta">
-          REMOTE-ONLY · PRODUKTNEUTRAL · BEGRENZTE MANDATSANZAHL
+          REMOTE · PRODUKTNEUTRAL
         </p>
 
         <div class="hero-cta">
@@ -67,14 +134,10 @@
   <!-- About Section -->
   <section id="about" class="about">
     <div class="container">
-      <!-- Divider (wie gewünscht) -->
-      <div class="section-divider"></div>
-
-      <!-- Header -->
       <div class="section-header">
         <h2 class="section-title">Über uns</h2>
         <p class="section-description">
-          Wir sind zwei Juristen mit Schwerpunkt auf der praktischen Nutzung von KI im juristischen Umfeld.
+          Wir sind zwei Juristen, die sich seit mehreren Jahren mit der praktischen Anwendung von KI im juristischen Umfeld befassen.
         </p>
       </div>
 
@@ -83,7 +146,7 @@
         <div class="team-photos">
           <div class="team-photo">
             <div class="team-photo-wrapper">
-              <img src="assets/Chris.png" alt="Christopher Brennan" />
+              <img src="assets/Chris.png" alt="Christopher Brennan" loading="lazy" />
             </div>
             <div class="photo-caption">
               <h3>Christopher Brennan</h3>
@@ -92,7 +155,7 @@
 
           <div class="team-photo">
             <div class="team-photo-wrapper">
-              <img src="assets/sebastian.png" alt="Sebastian Merkel" />
+              <img src="assets/sebastian.png" alt="Sebastian Merkel" loading="lazy" />
             </div>
             <div class="photo-caption">
               <h3>Sebastian Merkel</h3>
@@ -104,10 +167,7 @@
       <!-- About Text -->
       <div class="about-text">
         <p>
-          Unser Schwerpunkt liegt auf der Einordnung, Einführung und Nutzung von KI-Systemen im juristischen Umfeld – insbesondere darauf, Juristinnen und Juristen zu befähigen, diese Systeme sinnvoll, kontrolliert und verantwortungsvoll einzusetzen.
-        </p>
-        <p>
-          In ausgewählten Fällen unterstützen wir Kanzleien und Organisationen bei strategischen und operativen Fragestellungen rund um den Einsatz von Legal AI.
+          Unsere Arbeit bewegt sich an der Schnittstelle von juristischer Praxis, Technologieverständnis und organisatorischer Umsetzung. Wir kennen die Anforderungen von Kanzleien und Rechtsabteilungen ebenso wie die Grenzen und Risiken aktueller KI-Systeme.
         </p>
       </div>
 
@@ -143,72 +203,73 @@
 
       <div class="services-grid">
         <!-- Service 1 -->
-        <div class="service-card">
-          <div class="service-header">
-            <span class="service-number">1.</span>
-            <h3>Strategic Readiness</h3>
+        <a href="executive-sparring.html" class="service-card-link">
+          <div class="service-card">
+            <div class="service-header">
+              <h3>Legal AI Executive Sparring</h3>
+            </div>
+
+            <p class="service-description">
+              3-stündige Expert Session
+            </p>
+
+            <ul class="service-deliverables">
+              <li>Einordnung konkreter Fragen zu Legal AI</li>
+              <li>Markt-, Risiko- und Realitätscheck</li>
+              <li>Keine Umsetzung, keine Verpflichtung</li>
+            </ul>
+
+            <div class="service-meta">
+              5.000 € · 3 Stunden
+            </div>
           </div>
-
-          <p class="service-description">
-            Standortbestimmung und Entscheidungsgrundlage für Legal AI
-          </p>
-
-          <ul class="service-deliverables">
-            <li>Analyse der bestehenden Arbeitsweise</li>
-            <li>Einordnung von Chancen, Risiken und Grenzen</li>
-            <li>Priorisierung sinnvoller Einsatzfelder</li>
-            <li>Klarer Umsetzungsrahmen</li>
-          </ul>
-
-          <div class="service-meta">
-            Fixpreis · 2–4 Wochen · ab 8.000 €
-          </div>
-        </div>
+        </a>
 
         <!-- Service 2 -->
-        <div class="service-card featured">
-          <div class="service-header">
-            <span class="service-number">2.</span>
-            <h3>Operational Enablement</h3>
+        <a href="strategic-readiness.html" class="service-card-link">
+          <div class="service-card featured">
+            <div class="service-header">
+              <h3>Strategic Readiness</h3>
+            </div>
+
+            <p class="service-description">
+              Strukturierte Standortbestimmung für Legal AI
+            </p>
+
+            <ul class="service-deliverables">
+              <li>Bewertung von Organisation, Daten, Technik und Governance</li>
+              <li>Klare Priorisierung sinnvoller Einsatzfelder</li>
+              <li>Belastbare Entscheidungsgrundlage für nächste Schritte</li>
+            </ul>
+
+            <div class="service-meta">
+              9.000 € · ca. 2 Wochen
+            </div>
           </div>
-
-          <p class="service-description">
-            Gestaltung produktiver KI-Nutzung im juristischen Alltag
-          </p>
-
-          <ul class="service-deliverables">
-            <li>Strukturierte Workflows und Nutzungskonzepte</li>
-            <li>Organisationsspezifische Prompt- und Vorlagenstrukturen</li>
-            <li>Schulung ausgewählter Teams</li>
-            <li>Governance-, Rollen- und Leitlinienpaket</li>
-          </ul>
-
-          <div class="service-meta">
-            Projektbasiert · ab 12.000 €
-          </div>
-        </div>
+        </a>
 
         <!-- Service 3 -->
-        <div class="service-card">
-          <div class="service-header">
-            <span class="service-number">3.</span>
-            <h3>Sparring &amp; Beratung</h3>
+        <a href="operational-enablement.html" class="service-card-link">
+          <div class="service-card">
+            <div class="service-header">
+              <h3>Operational Enablement</h3>
+            </div>
+
+            <p class="service-description">
+              Produktiver, kontrollierter Einsatz von Legal AI im juristischen Alltag
+            </p>
+
+            <ul class="service-deliverables">
+              <li>Klare Nutzungsszenarien, feste Strukturen und definierte Verantwortung</li>
+              <li>Strukturierte Workflows und organisationsfähige Prompt-Logik</li>
+              <li>Rechtssichere, steuerbare Nutzung ohne Tool-Abhängigkeit</li>
+            </ul>
+
+            <div class="service-meta">
+              20.000 € · ca. 3–4 Wochen
+            </div>
           </div>
-
-          <p class="service-description">
-            Einordnung konkreter Fragestellungen und Entscheidungen
-          </p>
-
-          <ul class="service-deliverables">
-            <li>Bewertung einzelner Use Cases</li>
-            <li>Zweitmeinung vor strategischen Schritten</li>
-            <li>Laufendes Sparring bei Bedarf</li>
-          </ul>
-
-          <div class="service-meta">
-            500 € / Stunde
-          </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -226,7 +287,14 @@
           </p>
         </div>
 
-        <form class="kontakt-form" id="kontaktForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form class="kontakt-form" id="kontaktForm" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Web3Forms Access Key - Ersetze mit deinem eigenen Key von web3forms.com -->
+          <input type="hidden" name="access_key" value="7adeed01-9909-4783-9495-dbb6a7763399">
+          <input type="hidden" name="subject" value="Neue Kontaktanfrage - JurAI">
+          <input type="hidden" name="from_name" value="JurAI Website">
+          <!-- Honeypot Spam Protection -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
           <div class="form-row">
             <div class="form-group">
               <input type="text" id="name" name="name" placeholder="Name" required />
@@ -246,6 +314,13 @@
 
           <button type="submit" class="btn btn-primary">Senden</button>
         </form>
+
+        <div class="form-success" id="formSuccess">
+          <svg class="success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 6L9 17l-5-5"/>
+          </svg>
+          <p>Ihre Nachricht wurde erfolgreich gesendet.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -270,6 +345,20 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=2.0"></script>
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-consent" id="cookieConsent">
+    <div class="cookie-consent-content">
+      <div class="cookie-consent-text">
+        <p>Diese Website verwendet Cookies, um Ihnen die bestmögliche Nutzererfahrung zu bieten.
+        Mehr Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+      </div>
+      <div class="cookie-consent-buttons">
+        <button class="btn btn-secondary" id="cookieDecline">Ablehnen</button>
+        <button class="btn btn-primary" id="cookieAccept">Akzeptieren</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=8.0"></script>
 </body>
 </html>

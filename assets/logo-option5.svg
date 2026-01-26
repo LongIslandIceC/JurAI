@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <!-- JurAI zusammen, mit Bronze-Punkt auf dem i -->
+  <text x="5" y="30" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="600" letter-spacing="-0.03em" fill="#2c2c2c">JurA</text>
+  <!-- i ohne Punkt -->
+  <text x="85" y="30" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="600" fill="#2c2c2c">ı</text>
+  <!-- Bronze Punkt auf dem i -->
+  <circle cx="89" cy="10" r="4" fill="#8b7355"/>
+</svg>

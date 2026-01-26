@@ -55,7 +55,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
 
         if (target) {
-            const offsetTop = target.offsetTop - 80;
+            const offsetTop = target.offsetTop - 60;
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -90,8 +90,36 @@ animatedElements.forEach(el => {
 // ===================================
 // Contact Form Handling
 // ===================================
-// Form is now handled by Formspree - no custom JS needed
-// The form will submit directly to Formspree and redirect to a thank you page
+const kontaktForm = document.getElementById('kontaktForm');
+const formSuccess = document.getElementById('formSuccess');
+
+if (kontaktForm) {
+    kontaktForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(kontaktForm);
+
+        try {
+            const response = await fetch(kontaktForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Hide form, show success message
+                kontaktForm.style.display = 'none';
+                formSuccess.classList.add('show');
+            } else {
+                alert('Es gab einen Fehler. Bitte versuchen Sie es erneut.');
+            }
+        } catch (error) {
+            alert('Es gab einen Fehler. Bitte versuchen Sie es erneut.');
+        }
+    });
+}
 
 // ===================================
 // Active Navigation Link Highlighting
@@ -117,7 +145,6 @@ function highlightNavigation() {
     });
 }
 
-window.addEventListener('scroll', highlightNavigation);
 window.addEventListener('load', highlightNavigation);
 
 // ===================================
@@ -135,7 +162,7 @@ function debounce(func, wait) {
     };
 }
 
-// Apply debounce to scroll events if needed
+// Apply debounce to scroll events for better performance
 const debouncedHighlight = debounce(highlightNavigation, 10);
 window.addEventListener('scroll', debouncedHighlight);
 
@@ -203,6 +230,41 @@ window.addEventListener('scroll', () => {
 });
 
 // ===================================
+// Cookie Consent
+// ===================================
+function initCookieConsent() {
+    const cookieConsent = document.getElementById('cookieConsent');
+    const acceptBtn = document.getElementById('cookieAccept');
+    const declineBtn = document.getElementById('cookieDecline');
+
+    if (!cookieConsent) return;
+
+    // Check if user has already made a choice
+    const consentGiven = localStorage.getItem('cookieConsent');
+
+    if (!consentGiven) {
+        // Show banner after a short delay
+        setTimeout(() => {
+            cookieConsent.classList.add('show');
+        }, 1000);
+    }
+
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookieConsent.classList.remove('show');
+        });
+    }
+
+    if (declineBtn) {
+        declineBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'declined');
+            cookieConsent.classList.remove('show');
+        });
+    }
+}
+
+// ===================================
 // Initialize on DOM Load
 // ===================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -226,4 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transform = 'translateY(30px)';
         card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
     });
+
+    // Initialize cookie consent
+    initCookieConsent();
 });

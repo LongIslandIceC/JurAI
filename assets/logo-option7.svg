@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 40" fill="none">
+  <!-- JurAI mit Bronze-Akzent unter dem Text -->
+  <text x="5" y="28" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.02em" fill="#2c2c2c">JurAI</text>
+  <!-- Elegante Bronze-Linie darunter -->
+  <path d="M5 35 Q65 38 115 35" stroke="#8b7355" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>

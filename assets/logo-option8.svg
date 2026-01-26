@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 45" fill="none">
+  <!-- JurAI mit Bronze AI-Highlight -->
+  <text x="5" y="32" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="500" letter-spacing="-0.02em" fill="#2c2c2c">Jur</text>
+  <text x="58" y="32" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700" letter-spacing="-0.02em" fill="#8b7355">AI</text>
+  <!-- Kleine Bronze-Ecke/Akzent -->
+  <path d="M105 28 L115 28 L115 18" stroke="#8b7355" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

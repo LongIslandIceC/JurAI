@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <!-- JurAI - With subtle underline accent -->
+  <text x="10" y="28" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="500" letter-spacing="-0.01em">
+    <tspan fill="#2c2c2c">Jur</tspan><tspan fill="#8b7355">AI</tspan>
+  </text>
+  <!-- Subtle accent line under AI -->
+  <line x1="68" y1="33" x2="105" y2="33" stroke="#8b7355" stroke-width="2" stroke-linecap="round"/>
+</svg>

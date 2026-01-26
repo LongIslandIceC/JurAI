@@ -7,5 +7,5 @@ Allow: /
 # Disallow admin or sensitive paths (if any in future)
 # Disallow: /admin/
 
-# Sitemap location (add when created)
-# Sitemap: https://www.juraiconsulting.com/sitemap.xml
+# Sitemap location
+Sitemap: https://juraiconsulting.com/sitemap.xml

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 40" fill="none">
+  <!-- JurAI - Clean, modern typography with accent on AI -->
+  <text x="0" y="30" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="600" letter-spacing="-0.02em">
+    <tspan fill="#2c2c2c">Jur</tspan><tspan fill="#8b7355">AI</tspan>
+  </text>
+</svg>

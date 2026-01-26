@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 50" fill="none">
+  <!-- JurAI - Elegant with vertical bar separator -->
+  <text x="5" y="35" font-family="Inter, system-ui, sans-serif" font-size="30" font-weight="300" letter-spacing="0.05em" fill="#2c2c2c">JUR</text>
+  <rect x="70" y="12" width="2" height="28" fill="#8b7355" rx="1"/>
+  <text x="82" y="35" font-family="Inter, system-ui, sans-serif" font-size="30" font-weight="600" letter-spacing="0.05em" fill="#8b7355">AI</text>
+</svg>
