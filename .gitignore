@@ -43,3 +43,7 @@ temp/
 # Backup files
 *.bak
 *.backup
+
+# Claude Code
+.claude/
+.playwright-mcp/

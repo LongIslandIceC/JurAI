@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Beratungsvertrag - Operational Enablement - JurAI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        @page { size: A4; margin: 20mm; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-size: 10pt;
+            line-height: 1.6;
+            color: #2c2c2c;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            background: white;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b7355;
+        }
+
+        .logo-svg {
+            height: 70px;
+            width: auto;
+        }
+
+        .doc-title {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .doc-title h1 {
+            font-size: 18pt;
+            font-weight: 600;
+            color: #2c2c2c;
+            margin-bottom: 10px;
+        }
+
+        .doc-title .package-name {
+            font-size: 14pt;
+            font-weight: 500;
+            color: #8b7355;
+            margin-top: 15px;
+        }
+
+        .doc-title .package-desc {
+            font-size: 10pt;
+            color: #666;
+            font-style: italic;
+        }
+
+        .doc-meta {
+            text-align: center;
+            margin: 20px 0 30px;
+            font-size: 9pt;
+            color: #999;
+        }
+
+        .parties-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 4px;
+        }
+
+        .parties-intro {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .party {
+            margin: 20px 0;
+        }
+
+        .party-label {
+            font-size: 9pt;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #8b7355;
+            margin-bottom: 8px;
+        }
+
+        .party-content {
+            font-size: 10pt;
+            line-height: 1.7;
+            padding-left: 15px;
+            border-left: 2px solid #e5e5e5;
+        }
+
+        .fill-field {
+            display: block;
+            border-bottom: 1px solid #ccc;
+            min-height: 20px;
+            margin: 5px 0;
+        }
+
+        .between-text {
+            text-align: center;
+            font-weight: 500;
+            margin: 20px 0;
+        }
+
+        .section {
+            margin: 25px 0;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #8b7355;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .section-content {
+            text-align: justify;
+        }
+
+        .section-content p {
+            margin-bottom: 10px;
+        }
+
+        .subsection-num {
+            font-weight: 500;
+            color: #666;
+        }
+
+        ul {
+            margin: 10px 0 10px 25px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .signatures {
+            margin-top: 50px;
+            page-break-inside: avoid;
+        }
+
+        .sig-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 30px;
+        }
+
+        .sig-block {
+            text-align: left;
+        }
+
+        .sig-line {
+            border-bottom: 1px solid #2c2c2c;
+            margin-top: 50px;
+            margin-bottom: 8px;
+        }
+
+        .sig-label {
+            font-size: 9pt;
+            color: #666;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid #8b7355;
+            font-size: 8pt;
+            color: #999;
+            text-align: center;
+        }
+
+        .annex {
+            margin-top: 30px;
+            font-size: 9pt;
+            color: #666;
+        }
+
+        @media print {
+            body { padding: 0; }
+            .section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" fill="none">
+            <defs>
+                <linearGradient id="goldTaupe" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#c9a87c"/>
+                    <stop offset="40%" stop-color="#a8875c"/>
+                    <stop offset="100%" stop-color="#5c4d38"/>
+                </linearGradient>
+            </defs>
+            <text x="8" y="38" font-family="Baskerville, Georgia, serif" font-size="34" font-weight="500" letter-spacing="0.08em" fill="url(#goldTaupe)">JurAI</text>
+        </svg>
+    </div>
+
+    <div class="doc-title">
+        <h1>Beratungsvertrag</h1>
+        <div class="package-name">Operational Enablement</div>
+        <div class="package-desc">Kontrollierte Einführung von Legal AI in den juristischen Alltag</div>
+    </div>
+
+    <div class="doc-meta">Stand: 01. Januar 2026</div>
+
+    <div class="parties-section">
+        <div class="parties-intro">zwischen</div>
+
+        <div class="party">
+            <div class="party-content">
+                <span class="fill-field"></span>
+                <span class="fill-field"></span>
+                vertreten durch <span class="fill-field"></span>
+            </div>
+            <div class="party-label" style="margin-top: 10px;">– nachfolgend „Auftraggeber" genannt –</div>
+        </div>
+
+        <div class="between-text">und</div>
+
+        <div class="party">
+            <div class="party-label">Auftragnehmer</div>
+            <div class="party-content">
+                <strong>JurAI GbR</strong><br>
+                vertreten durch die Gesellschafter:<br>
+                Sebastian Merkel, Terofalstraße 6, 80689 München<br>
+                Christopher Brennan, Helene-Weber-Allee 9, 80637 München
+            </div>
+            <div class="party-label" style="margin-top: 10px;">– nachfolgend „Auftragnehmer" genannt –</div>
+        </div>
+
+        <div class="between-text" style="margin-top: 25px;">wird folgender Beratungsvertrag geschlossen:</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">§ 1 Vertragsgegenstand</div>
+        <div class="section-content">
+            <p><span class="subsection-num">1.1</span> Der Auftraggeber erteilt hiermit dem Auftragnehmer den Auftrag, ihn bei folgenden Entscheidungen/Vorhaben zu beraten:</p>
+            <p>Dieses Projekt dient der Überführung von Legal AI aus der Konzept- und Testphase in den produktiven, kontrollierten Einsatz im juristischen Alltag. Im Fokus steht die operative Befähigung der Organisation, KI-gestützte Arbeitsprozesse sicher, effizient und rechtskonform zu nutzen.</p>
+            <p>Ziel ist es, auf Basis der Ergebnisse der Strategic Readiness eine klare Nutzungs- und Governance-Struktur zu etablieren, die KI-Anwendungen vom Pilotstadium in den Regelbetrieb überführt. Dabei werden konkrete Workflows, Prompts, Rollen und Leitlinien entwickelt, die den produktiven Einsatz von Legal AI in der täglichen Arbeit ermöglichen.</p>
+            <p>Das Projekt schließt die Lücke zwischen strategischer Vorbereitung und operativem Doing. Es schafft die organisatorischen, technischen und prozessualen Voraussetzungen für eine skalierbare, verantwortbare und wiederholbare Nutzung von Legal AI.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">§ 2 Leistungen des Auftragnehmers</div>
+        <div class="section-content">
+            <p>Zur Erfüllung der in Ziffer 1 genannten Aufgaben wird der Auftragnehmer insbesondere folgende Leistungen erbringen:</p>
+            <p>Der Auftragnehmer unterstützt den Auftraggeber bei der Überführung von Legal AI aus der Konzept- und Testphase in den produktiven Einsatz. Ziel ist die operative Befähigung der Organisation, KI-gestützte Arbeitsprozesse sicher, effizient und rechtskonform zu nutzen. Die Leistung umfasst insbesondere:</p>
+            <ul>
+                <li>Durchführung eines Projekt-Onboardings und Setups mit Definition von Zielen, Scope, Rollen, Zuständigkeiten und Kommunikationsstruktur</li>
+                <li>Entwicklung und Dokumentation von zwei bis drei priorisierten Kernprozessen, in denen KI eingesetzt werden soll</li>
+                <li>Erstellung einer organisationsspezifischen Prompt- und Vorlagenstruktur, die erweiterbar und wartbar ist</li>
+                <li>Ausarbeitung eines Governance-, Rollen- und Leitlinienpakets zur rechtssicheren Anwendung von Legal AI</li>
+                <li>Durchführung praxisorientierter Schulungen ausgewählter Teams zur sicheren Nutzung der erarbeiteten Workflows und Prompts</li>
+                <li>Erstellung eines abschließenden Go-Live-Playbooks mit Zusammenfassung aller Ergebnisse, Handlungsempfehlungen und Grundlagen für eine spätere Skalierung</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">§ 3 Vergütung</div>
+        <div class="section-content">
+            <p><span class="subsection-num">3.1</span> Der Auftragnehmer erhält vom Auftraggeber ein Pauschalhonorar in Höhe von insgesamt <strong>18.000 €</strong>.</p>
+            <p><span class="subsection-num">3.2</span> Der Auftraggeber zahlt an den Auftragnehmer bei Auftragserteilung einen Vorschuss in Höhe von 10.000 €. Ein weiterer Betrag in Höhe von 8.000 € ist nach Abschluss der Arbeiten fällig.</p>
+            <p><span class="subsection-num">3.3</span> Alle in Ziffer 3.1 und 3.2 genannten Beträge verstehen sich als Nettobeträge zuzüglich der jeweils gültigen Mehrwertsteuer.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">§ 4 Zeit und Ort der Leistungserbringung</div>
+        <div class="section-content">
+            <p><span class="subsection-num">4.1</span> Zeit und Ort der Leistungserbringung vereinbaren die Vertragsparteien im Einzelnen einvernehmlich.</p>
+            <p><span class="subsection-num">4.2</span> Der Auftragnehmer verpflichtet sich jedoch, dem Auftraggeber zweimal im Projektzeitraum ganztägig in dessen Hause zur Verfügung zu stehen. Der Auftraggeber stellt dem Auftragnehmer für die Dauer des Besuchs einen geeigneten Besprechungsraum zur Verfügung, der für die Durchführung von Workshops, Präsentationen und Interviews geeignet ist. Der Raum muss mit der erforderlichen technischen Ausstattung, insbesondere mit Beamer oder Bildschirm für Präsentationen, Internetzugang und ausreichenden Stromanschlüssen, versehen sein.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">§ 5 Berichterstattung</div>
+        <div class="section-content">
+            <p><span class="subsection-num">5.1</span> Der Auftragnehmer erstattet dem Auftraggeber einen schriftlichen Bericht über seine laufende Arbeit und deren Ergebnisse. Die Berichterstattung kann nach Wahl des Auftraggebers einmalig oder entsprechend dem Arbeitsfortschritt in Form von Zwischenberichten erfolgen.</p>
+            <p><span class="subsection-num">5.2</span> In jedem Fall ist der Auftragnehmer verpflichtet, dem Auftraggeber spätestens zum Vertragsende einen Abschlussbericht schriftlich zu erstatten. Der Abschlussbericht ist in zwei Exemplaren dem Auftraggeber vorzulegen.</p>
+            <p><span class="subsection-num">5.3</span> Erfüllt der Auftragnehmer diese Verpflichtungen nicht, nur unvollständig oder nicht termingerecht oder mangelhaft, ist der Auftraggeber berechtigt, neben den sonstigen Ansprüchen seine Gegenleistung zurückzuhalten.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">§ 6 Aufwendungsersatz</div>
+        <div class="section-content">
+            <p><span class="subsection-num">6.1</span> Der Auftraggeber erstattet dem Auftragnehmer folgende im Zusammenhang mit seiner Tätigkeit anfallenden erforderlichen Aufwendungen: Reisekosten bis zu einer Höhe von 400 €.</p>
+            <p><span class="subsection-num">6.2</span> Der Ersatz aller sonstigen Aufwendungen des Auftragnehmers bedarf der schriftlichen Zustimmung des Auftraggebers.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">§ 7 Mitwirkungspflicht des Auftraggebers</div>
+        <div class="section-content">
+            <p><span class="subsection-num">7.1</span> Der Auftraggeber hat dafür Sorge zu tragen, dass dem Auftragnehmer alle für die Ausführung seiner Tätigkeit notwendigen Unterlagen rechtzeitig vorgelegt werden, ihm alle Informationen erteilt werden und er von allen Vorgängen und Umständen in Kenntnis gesetzt wird. Dies gilt auch für Unterlagen, Vorgänge und Umstände, die erst während der Tätigkeit des Auftragnehmers bekannt werden.</p>
+            <p><span class="subsection-num">7.2</span> Auf Verlangen des Auftragnehmers hat der Auftraggeber die Richtigkeit und Vollständigkeit der von ihm vorgelegten Unterlagen sowie seiner Auskünfte und mündlichen Erklärungen schriftlich zu bestätigen.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">§ 8 Schweigepflicht</div>
+        <div class="section-content">
+            <p>Der Auftragnehmer ist verpflichtet, über alle Informationen, die ihm im Zusammenhang mit seiner Tätigkeit für den Auftraggeber bekannt werden, Stillschweigen zu bewahren, gleichviel ob es sich dabei um den Auftraggeber selbst oder dessen Geschäftsverbindungen handelt, es sei denn, dass der Auftraggeber ihn von dieser Schweigepflicht entbindet.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">§ 9 Datenschutz</div>
+        <div class="section-content">
+            <p><span class="subsection-num">9.1</span> Erfolgt eine Verarbeitung personenbezogener Daten für den Auftraggeber, so ist der Auftragnehmer verpflichtet, hinreichende Garantien dafür zu bieten, dass geeignete technische und organisatorische Maßnahmen so durchgeführt werden, dass die Verarbeitung im Einklang mit den Anforderungen der DSGVO erfolgt und den Schutz der Rechte der betroffenen Person gewährleistet.</p>
+            <p><span class="subsection-num">9.2</span> Der Auftragnehmer nimmt keine weiteren Auftragsverarbeiter ohne vorherige gesonderte oder allgemeine schriftliche Genehmigung des Verantwortlichen in Anspruch. Im Fall einer allgemein schriftlichen Genehmigung informiert der Auftragsverarbeiter den Verantwortlichen immer über jede beabsichtigte Änderung in Bezug auf die Hinzuziehung oder die Ersetzung anderer Auftragsverarbeiter, wodurch der Auftraggeber die Möglichkeit erhält, gegen derartige Veränderungen Einspruch zu erheben. In Bezug auf die Inhalte eines Auftragsdatenverarbeitungsvertrages gelten die Anforderungen nach Art. 28 Abs. 3 DSGVO.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">§ 10 Vertragsdauer</div>
+        <div class="section-content">
+            <p>Der Vertrag wird mit der Unterzeichnung wirksam und endet mit Erbringung der vereinbarten Leistungen.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">§ 11 Aufbewahrung und Rückgabe von Unterlagen</div>
+        <div class="section-content">
+            <p>Der Auftragnehmer verpflichtet sich, alle ihm zur Verfügung gestellten Geschäfts- und Betriebsunterlagen ordnungsgemäß aufzubewahren, insbesondere dafür zu sorgen, dass Dritte nicht Einsicht nehmen können. Die zur Verfügung gestellten Unterlagen sind während der Dauer des Vertrages auf Anforderung, nach Beendigung des Vertrages unaufgefordert dem Vertragspartner zurückzugeben.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">§ 12 Sonstige Ansprüche / Rentenversicherung</div>
+        <div class="section-content">
+            <p><span class="subsection-num">12.1</span> Mit der Zahlung der in diesem Vertrag vereinbarten Vergütung sind alle Ansprüche des Auftragnehmers gegen den Auftraggeber aus diesem Vertrag erfüllt.</p>
+            <p><span class="subsection-num">12.2</span> Für die Versteuerung der Vergütung hat der Auftragnehmer selbst zu sorgen.</p>
+            <p><span class="subsection-num">12.3</span> Der Auftragnehmer wird darauf hingewiesen, dass er nach § 2 Nr. 9 SGB VI rentenversicherungspflichtig sein kann, wenn er auf Dauer und im Wesentlichen nur für einen Auftraggeber tätig ist und keine versicherungspflichtigen Arbeitnehmer beschäftigt.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">§ 13 Schlussbestimmungen</div>
+        <div class="section-content">
+            <p><span class="subsection-num">13.1</span> Änderungen und Ergänzungen dieses Vertrages bedürfen zu ihrer Wirksamkeit der Schriftform. Dies gilt auch für die Änderung oder Aufhebung dieser Klausel.</p>
+            <p><span class="subsection-num">13.2</span> Mündliche Nebenabreden bestehen nicht.</p>
+            <p><span class="subsection-num">13.3</span> Sind oder werden einzelne Bestimmungen dieses Vertrages unwirksam, so wird dadurch die Gültigkeit der übrigen Bestimmungen nicht berührt. Die Vertragspartner werden in diesem Fall die ungültige Bestimmung durch eine andere ersetzen, die dem wirtschaftlichen Zweck der weggefallenen Regelung in zulässiger Weise am nächsten kommt.</p>
+            <p><span class="subsection-num">13.4</span> Sofern beide Vertragsparteien Unternehmer sind, sind für alle Streitigkeiten aus oder im Zusammenhang mit diesem Vertrag die Gerichte in München ausschließlich zuständig.</p>
+        </div>
+    </div>
+
+    <div class="signatures">
+        <div class="sig-grid">
+            <div class="sig-block">
+                <div class="sig-line"></div>
+                <div class="sig-label">Ort, Datum</div>
+                <div class="sig-line"></div>
+                <div class="sig-label">Auftraggeber (Vor- und Nachname)</div>
+            </div>
+            <div class="sig-block">
+                <div class="sig-line"></div>
+                <div class="sig-label">Ort, Datum</div>
+                <div class="sig-line"></div>
+                <div class="sig-label">Auftragnehmer (Vor- und Nachname)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="annex">
+        <p><strong>Anlage:</strong> (sofern vorhanden)</p>
+    </div>
+
+    <div class="footer">
+        JurAI GbR · Legal AI Strategy & Enablement · hello@juraiconsulting.com
+    </div>
+</body>
+</html>
