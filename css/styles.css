@@ -1628,3 +1628,191 @@ a.service-card:hover {
         flex: 1;
     }
 }
+
+/* ===================================
+   PDF Preview Modal - Apple Liquid Glass
+   =================================== */
+
+.pdf-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pdf-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdf-modal.visible {
+    opacity: 1;
+}
+
+.pdf-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.pdf-modal-container {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    height: 85vh;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(40px) saturate(200%);
+    -webkit-backdrop-filter: blur(40px) saturate(200%);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow:
+        0 0 0 0.5px rgba(0, 0, 0, 0.1),
+        0 8px 40px rgba(0, 0, 0, 0.15),
+        0 24px 80px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 0.5px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1;
+    transform: scale(0.95) translateY(10px);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pdf-modal.visible .pdf-modal-container {
+    transform: scale(1) translateY(0);
+}
+
+.pdf-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pdf-modal-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.85);
+    letter-spacing: -0.01em;
+}
+
+.pdf-modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pdf-modal-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: rgba(139, 115, 85, 0.9);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-modal-download:hover {
+    background: rgba(139, 115, 85, 1);
+    transform: scale(1.02);
+    box-shadow: 0 2px 8px rgba(139, 115, 85, 0.3);
+}
+
+.pdf-modal-download svg {
+    width: 14px;
+    height: 14px;
+}
+
+.pdf-modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pdf-modal-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.pdf-modal-close svg {
+    width: 14px;
+    height: 14px;
+    stroke: rgba(0, 0, 0, 0.5);
+    stroke-width: 2.5;
+}
+
+.pdf-modal-body {
+    flex: 1;
+    overflow: hidden;
+    background: rgba(245, 245, 247, 0.8);
+    margin: 12px;
+    border-radius: 12px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.pdf-modal-body iframe,
+.pdf-modal-body embed,
+.pdf-modal-body object {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .pdf-modal-container {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        border-radius: 0;
+    }
+
+    .pdf-modal-header {
+        padding: 14px 16px;
+    }
+
+    .pdf-modal-title {
+        font-size: 14px;
+    }
+
+    .pdf-modal-download span {
+        display: none;
+    }
+
+    .pdf-modal-download {
+        padding: 8px;
+        border-radius: 50%;
+    }
+
+    .pdf-modal-body {
+        margin: 0;
+        border-radius: 0;
+    }
+}
