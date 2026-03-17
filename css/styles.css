@@ -582,6 +582,25 @@ section {
     margin: 0;
 }
 
+.linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--spacing-xs);
+    color: var(--color-text-light);
+    transition: var(--transition);
+}
+
+.linkedin-link:hover {
+    color: #0077b5;
+    transform: scale(1.1);
+}
+
+.linkedin-link svg {
+    width: 24px;
+    height: 24px;
+}
+
 /* Team Members */
 .team-members {
     margin-top: var(--spacing-lg);

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Beratungsvertrag - Operational Enablement - JurAI</title>
+    <link rel="icon" type="image/png" href="../assets/logo gold-taupe/jai_logo_taupe_transparent.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .contract-page {
+            padding-top: 100px;
+            padding-bottom: var(--spacing-xl);
+            background: var(--color-bg);
+        }
+        .contract-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-md);
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+        .contract-container {
+            background: white;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .contract-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--color-accent);
+        }
+        .logo-svg { height: 70px; width: auto; display: block; margin: 0 auto; }
+        .contract-logo {
+            font-family: Baskerville, Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            color: #a8875c;
+            text-align: center;
+        }
+        .doc-title { text-align: center; margin: 30px 0; }
+        .doc-title h1 { font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; }
+        .doc-title .package-name { font-size: 1.25rem; font-weight: 500; color: var(--color-accent); margin-top: 15px; }
+        .doc-title .package-desc { font-size: 0.875rem; color: var(--color-text-light); font-style: italic; }
+        .doc-meta { text-align: center; margin: 20px 0 30px; font-size: 0.75rem; color: var(--color-text-light); }
+        .parties-section { margin: 30px 0; padding: 20px; background: var(--color-bg-light); border-radius: 4px; }
+        .party { margin-bottom: 20px; }
+        .party:last-child { margin-bottom: 0; }
+        .party-label { font-weight: 600; color: var(--color-accent); margin-bottom: 8px; }
+        .party-details { color: var(--color-text-light); font-size: 0.875rem; line-height: 1.6; }
+        .party-input { border-bottom: 1px solid var(--color-border); min-height: 24px; margin: 5px 0; }
+        .section { margin: 25px 0; }
+        .section-title { font-size: 1rem; font-weight: 600; color: var(--color-accent); margin-bottom: 12px; }
+        .section-content { text-align: justify; }
+        .section-content p { margin-bottom: 12px; font-size: 0.9375rem; line-height: 1.7; }
+        .sub-item { margin-bottom: 12px; font-size: 0.9375rem; line-height: 1.7; padding-left: 24px; }
+        .sub-item-number { font-weight: 500; }
+        .signature-section { margin-top: 50px; display: flex; justify-content: space-between; gap: 40px; }
+        .signature-block { flex: 1; }
+        .signature-line { border-bottom: 1px solid var(--color-primary); margin-bottom: 8px; min-height: 40px; }
+        .signature-label { font-size: 0.75rem; color: var(--color-text-light); }
+        .date-line { margin-bottom: 30px; }
+        @media print {
+            .nav, .contract-actions, .footer { display: none !important; }
+            .contract-page { padding-top: 0; }
+            .contract-container { box-shadow: none; padding: 0; }
+        }
+        @media (max-width: 768px) {
+            .contract-container { padding: 30px 20px; }
+            .signature-section { flex-direction: column; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/logo-new3.svg" alt="JurAI" class="logo-text">
+                    <img src="../assets/logo gold-taupe/jai_logo_taupe_transparent.png" alt="JurAI" class="logo-icon">
+                </a>
+                <div class="nav-links">
+                    <a href="../index.html#about" class="nav-link">
+                        <span class="nav-text">Über uns</span>
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </a>
+                    <a href="../index.html#leistungen" class="nav-link">
+                        <span class="nav-text">Leistungen</span>
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="13" rx="2" ry="2"/>
+                            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                            <line x1="12" y1="12" x2="12" y2="12.01"/>
+                            <path d="M2 12h20"/>
+                            <rect x="9" y="10" width="6" height="4" rx="0.5"/>
+                        </svg>
+                    </a>
+                    <a href="../index.html#kontakt" class="nav-link cta-button">
+                        <span class="nav-text">Kontakt</span>
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Menü öffnen">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contract Content -->
+    <section class="contract-page">
+        <div class="container">
+            <div class="contract-actions">
+                <a href="../operational-enablement.html" class="btn btn-secondary">Zurück</a>
+                <button onclick="downloadPDF()" class="btn btn-primary">Als PDF herunterladen</button>
+            </div>
+
+            <div class="contract-container">
+                <div class="contract-header">
+                    <div class="contract-logo">JurAI</div>
+                </div>
+
+                <div class="doc-title">
+                    <h1>Beratungsvertrag</h1>
+                    <div class="package-name">Operational Enablement</div>
+                    <div class="package-desc">Kontrollierte Einführung von Legal AI in den juristischen Alltag</div>
+                </div>
+
+                <div class="doc-meta">Stand: 01. Januar 2026</div>
+
+                <div class="parties-section">
+                    <div class="party">
+                        <div class="party-label">zwischen</div>
+                        <div class="party-input"></div>
+                        <div class="party-details">(Vor- und Zuname oder Firma, derzeitige Anschrift)</div>
+                        <div class="party-input"></div>
+                        <div class="party-details">vertreten durch</div>
+                        <div class="party-details" style="margin-top: 10px;">– nachfolgend „Auftraggeber" genannt –</div>
+                    </div>
+                    <div class="party">
+                        <div class="party-label">und</div>
+                        <div class="party-details">
+                            JurAI GbR<br><br>
+                            vertreten durch die Gesellschafter:<br>
+                            Sebastian Merkel, Terofalstraße 6, 80689 München<br>
+                            Christopher Brennan, Helene-Weber-Allee 9, 80637 München<br><br>
+                            – nachfolgend „Auftragnehmer" genannt –
+                        </div>
+                    </div>
+                </div>
+
+                <p style="margin-bottom: 25px;">wird folgender Beratungsvertrag geschlossen:</p>
+
+                <div class="section">
+                    <div class="section-title">1. Vertragsgegenstand</div>
+                    <div class="section-content">
+                        <p>Der Auftraggeber erteilt hiermit dem Auftragnehmer den Auftrag, ihn bei folgenden Entscheidungen/Vorhaben zu beraten:</p>
+                        <p>Dieses Projekt dient der Überführung von Legal AI aus der Konzept- und Testphase in den produktiven, kontrollierten Einsatz im juristischen Alltag. Im Fokus steht die operative Befähigung der Organisation, KI-gestützte Arbeitsprozesse sicher, effizient und rechtskonform zu nutzen.</p>
+                        <p>Ziel ist es, auf Basis der Ergebnisse der Strategic Readiness eine klare Nutzungs- und Governance-Struktur zu etablieren, die KI-Anwendungen vom Pilotstadium in den Regelbetrieb überführt. Dabei werden konkrete Workflows, Prompts, Rollen und Leitlinien entwickelt, die den produktiven Einsatz von Legal AI in der täglichen Arbeit ermöglichen.</p>
+                        <p>Das Projekt schließt die Lücke zwischen strategischer Vorbereitung und operativem Doing. Es schafft die organisatorischen, technischen und prozessualen Voraussetzungen für eine skalierbare, verantwortbare und wiederholbare Nutzung von Legal AI.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">2. Leistungen des Auftragnehmers</div>
+                    <div class="section-content">
+                        <p>Zur Erfüllung der in Ziffer 1 genannten Aufgaben wird der Auftragnehmer insbesondere folgende Leistungen erbringen:</p>
+                        <p>Der Auftragnehmer unterstützt den Auftraggeber bei der Überführung von Legal AI aus der Konzept- und Testphase in den produktiven Einsatz. Ziel ist die operative Befähigung der Organisation, KI-gestützte Arbeitsprozesse sicher, effizient und rechtskonform zu nutzen. Die Leistung umfasst insbesondere die strukturierte Einführung ausgewählter Anwendungsfälle, die Entwicklung passender Workflows, Prompts und Leitlinien sowie die Schaffung einer tragfähigen Governance- und Organisationsstruktur.</p>
+                        <p>Umfasst sind die Durchführung eines Projekt-Onboardings und Setups mit Definition von Zielen, Scope, Rollen, Zuständigkeiten und Kommunikationsstruktur; Entwicklung und Dokumentation von zwei bis drei priorisierten Kernprozessen, in denen KI eingesetzt werden soll; Erstellung einer organisationsspezifischen Prompt- und Vorlagenstruktur, die erweiterbar und wartbar ist; Ausarbeitung eines Governance-, Rollen- und Leitlinienpakets zur rechtssicheren Anwendung von Legal AI; Durchführung praxisorientierter Schulungen ausgewählter Teams zur sicheren Nutzung der erarbeiteten Workflows und Prompts; Erstellung eines abschließenden Go-Live-Playbooks mit Zusammenfassung aller Ergebnisse, Handlungsempfehlungen und Grundlagen für eine spätere Skalierung.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">3. Vergütung</div>
+                    <div class="section-content">
+                        <p class="sub-item"><span class="sub-item-number">3.1</span> Der Auftragnehmer erhält vom Auftraggeber ein Pauschalhonorar in Höhe von insgesamt 20.000 €.</p>
+                        <p class="sub-item"><span class="sub-item-number">3.2</span> Der Auftraggeber zahlt an den Auftragnehmer bei Auftragserteilung einen Vorschuss in Höhe von 10.000 €. Ein weiterer Betrag in Höhe von 10.000 € ist nach Abschluss der Arbeiten fällig.</p>
+                        <p class="sub-item"><span class="sub-item-number">3.3</span> Alle in Ziffer 3.1 und 3.2 genannten Beträge verstehen sich als Nettobeträge zuzüglich der jeweils gültigen Mehrwertsteuer.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">4. Zeit und Ort der Leistungserbringung</div>
+                    <div class="section-content">
+                        <p class="sub-item"><span class="sub-item-number">4.1</span> Zeit und Ort der Leistungserbringung vereinbaren die Vertragsparteien im Einzelnen einvernehmlich.</p>
+                        <p class="sub-item"><span class="sub-item-number">4.2</span> Der Auftragnehmer verpflichtet sich jedoch, dem Auftraggeber zwei mal im Projektzeitraum ganztägig in dessen Hause zur Verfügung zu stehen. Der Auftraggeber stellt dem Auftragnehmer für die Dauer des Besuchs einen geeigneten Besprechungsraum zur Verfügung, der für die Durchführung von Workshops, Präsentationen und Interviews geeignet ist. Der Raum muss mit der erforderlichen technischen Ausstattung, insbesondere mit Beamer oder Bildschirm für Präsentationen, Internetzugang und ausreichenden Stromanschlüssen, versehen sein.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">5. Berichterstattung</div>
+                    <div class="section-content">
+                        <p class="sub-item"><span class="sub-item-number">5.1</span> Der Auftragnehmer erstattet dem Auftraggeber einen schriftlichen Bericht über seine laufende Arbeit und deren Ergebnisse. Die Berichterstattung kann nach Wahl des Auftraggebers einmalig oder entsprechend dem Arbeitsfortschritt in Form von Zwischenberichten erfolgen.</p>
+                        <p class="sub-item"><span class="sub-item-number">5.2</span> In jedem Fall ist der Auftragnehmer verpflichtet, dem Auftraggeber spätestens zum Vertragsende einen Abschlussbericht schriftlich zu erstatten. Der Abschlussbericht ist in zwei Exemplaren dem Auftraggeber vorzulegen.</p>
+                        <p class="sub-item"><span class="sub-item-number">5.3</span> Erfüllt der Auftragnehmer diese Verpflichtungen nicht, nur unvollständig oder nicht termingerecht oder mangelhaft, ist der Auftraggeber berechtigt, neben den sonstigen Ansprüchen seine Gegenleistung zurückzuhalten.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">6. Aufwendungsersatz</div>
+                    <div class="section-content">
+                        <p class="sub-item"><span class="sub-item-number">6.1</span> Der Auftraggeber erstattet dem Auftragnehmer folgende im Zusammenhang mit seiner Tätigkeit anfallenden erforderlichen Aufwendungen: Reisekosten bis zu einer Höhe von 400 €.</p>
+                        <p class="sub-item"><span class="sub-item-number">6.2</span> Der Ersatz aller sonstigen Aufwendungen des Auftragnehmers bedarf der schriftlichen Zustimmung des Auftraggebers.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">7. Mitwirkungspflicht des Auftraggebers</div>
+                    <div class="section-content">
+                        <p class="sub-item"><span class="sub-item-number">7.1</span> Der Auftraggeber hat dafür Sorge zu tragen, dass dem Auftragnehmer alle für die Ausführung seiner Tätigkeit notwendigen Unterlagen rechtzeitig vorgelegt werden, ihm alle Informationen erteilt werden und er von allen Vorgängen und Umständen in Kenntnis gesetzt wird. Dies gilt auch für Unterlagen, Vorgänge und Umstände, die erst während der Tätigkeit des Auftragnehmers bekannt werden.</p>
+                        <p class="sub-item"><span class="sub-item-number">7.2</span> Auf Verlangen des Auftragnehmers hat der Auftraggeber die Richtigkeit und Vollständigkeit der von ihm vorgelegten Unterlagen sowie seiner Auskünfte und mündlichen Erklärungen schriftlich zu bestätigen.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">8. Schweigepflicht</div>
+                    <div class="section-content">
+                        <p>Der Auftragnehmer ist verpflichtet, über alle Informationen, die ihm im Zusammenhang mit seiner Tätigkeit für den Auftraggeber bekannt werden, Stillschweigen zu bewahren, gleichviel ob es sich dabei um den Auftraggeber selbst oder dessen Geschäftsverbindungen handelt, es sei denn, dass der Auftraggeber ihn von dieser Schweigepflicht entbindet.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">9. Datenschutz</div>
+                    <div class="section-content">
+                        <p class="sub-item"><span class="sub-item-number">9.1</span> Erfolgt eine Verarbeitung personenbezogener Daten für den Auftraggeber, so ist der Auftragnehmer verpflichtet, hinreichende Garantien dafür zu bieten, dass geeignete technische und organisatorische Maßnahmen so durchgeführt werden, dass die Verarbeitung im Einklang mit den Anforderungen der DSGVO erfolgt und den Schutz der Rechte der betroffenen Person gewährleistet.</p>
+                        <p class="sub-item"><span class="sub-item-number">9.2</span> Der Auftragnehmer nimmt keine weiteren Auftragsverarbeiter ohne vorherige gesonderte oder allgemeine schriftliche Genehmigung des Verantwortlichen in Anspruch. Im Fall einer allgemein schriftlichen Genehmigung informiert der Auftragsverarbeiter den Verantwortlichen immer über jede beabsichtigte Änderung in Bezug auf die Hinzuziehung oder die Ersetzung anderer Auftragsverarbeiter, wodurch der Auftraggeber die Möglichkeit erhält, gegen derartige Veränderungen Einspruch zu erheben. In Bezug auf die Inhalte eines Auftragsdatenverarbeitungsvertrages gelten die Anforderungen nach Art. 28 Abs. 3 DSGVO.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">10. Vertragsdauer</div>
+                    <div class="section-content">
+                        <p>Der Vertrag wird mit der Unterzeichnung wirksam und endet mit Erbringung der vereinbarten Leistungen.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">11. Aufbewahrung und Rückgabe von Unterlagen</div>
+                    <div class="section-content">
+                        <p>Der Auftragnehmer verpflichtet sich, alle ihm zur Verfügung gestellten Geschäfts- und Betriebsunterlagen ordnungsgemäß aufzubewahren, insbesondere dafür zu sorgen, dass Dritte nicht Einsicht nehmen können. Die zur Verfügung gestellten Unterlagen sind während der Dauer des Vertrages auf Anforderung, nach Beendigung des Vertrages unaufgefordert dem Vertragspartner zurückzugeben.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">12. Sonstige Ansprüche/Rentenversicherung</div>
+                    <div class="section-content">
+                        <p class="sub-item"><span class="sub-item-number">12.1</span> Mit der Zahlung der in diesem Vertrag vereinbarten Vergütung sind alle Ansprüche des Auftragnehmers gegen den Auftraggeber aus diesem Vertrag erfüllt.</p>
+                        <p class="sub-item"><span class="sub-item-number">12.2</span> Für die Versteuerung der Vergütung hat der Auftragnehmer selbst zu sorgen.</p>
+                        <p class="sub-item"><span class="sub-item-number">12.3</span> Der Auftragnehmer wird darauf hingewiesen, dass er nach § 2 Nr. 9 SGB VI rentenversicherungspflichtig sein kann, wenn er auf Dauer und im Wesentlichen nur für einen Auftraggeber tätig ist und keine versicherungspflichtigen Arbeitnehmer beschäftigt.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">13. Schlussbestimmungen</div>
+                    <div class="section-content">
+                        <p class="sub-item"><span class="sub-item-number">13.1</span> Änderungen und Ergänzungen dieses Vertrages bedürfen zu ihrer Wirksamkeit der Schriftform. Dies gilt auch für die Änderung oder Aufhebung dieser Klausel.</p>
+                        <p class="sub-item"><span class="sub-item-number">13.2</span> Mündliche Nebenabreden bestehen nicht.</p>
+                        <p class="sub-item"><span class="sub-item-number">13.3</span> Sind oder werden einzelne Bestimmungen dieses Vertrages unwirksam, so wird dadurch die Gültigkeit der übrigen Bestimmungen nicht berührt. Die Vertragspartner werden in diesem Fall die ungültige Bestimmung durch eine andere ersetzen, die dem wirtschaftlichen Zweck der weggefallenen Regelung in zulässiger Weise am nächsten kommt.</p>
+                        <p class="sub-item"><span class="sub-item-number">13.4</span> Sofern beide Vertragsparteien Unternehmer sind, sind für alle Streitigkeiten aus oder im Zusammenhang mit diesem Vertrag die Gerichte in München ausschließlich zuständig.</p>
+                    </div>
+                </div>
+
+                <div class="signature-section">
+                    <div class="signature-block">
+                        <div class="date-line">
+                            <div class="signature-line"></div>
+                            <div class="signature-label">Ort, Datum</div>
+                        </div>
+                        <div class="signature-line"></div>
+                        <div class="signature-label">Auftraggeber (Unterschrift)</div>
+                    </div>
+                    <div class="signature-block">
+                        <div class="date-line">
+                            <div class="signature-line"></div>
+                            <div class="signature-label">Ort, Datum</div>
+                        </div>
+                        <div class="signature-line"></div>
+                        <div class="signature-label">Auftragnehmer (Unterschrift)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><p>JurAI</p></div>
+                <div class="footer-links">
+                    <a href="../impressum.html">Impressum</a>
+                    <a href="../datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JurAI. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function downloadPDF() {
+            const element = document.querySelector('.contract-container');
+            const opt = {
+                margin: [15, 15, 15, 15],
+                filename: 'JurAI_Beratungsvertrag_Operational_Enablement.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+</body>
+</html>
