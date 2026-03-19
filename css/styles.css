@@ -381,6 +381,15 @@ a:hover {
     text-transform: uppercase;
 }
 
+.hero-value-prop {
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+    max-width: 600px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
 /* ===================================
    Section Styles
    =================================== */
