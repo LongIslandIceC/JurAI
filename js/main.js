@@ -230,6 +230,35 @@ window.addEventListener('scroll', () => {
 });
 
 // ===================================
+// FAQ Accordion
+// ===================================
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        if (question) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Toggle current item
+                item.classList.toggle('active');
+                question.setAttribute('aria-expanded', !isActive);
+            });
+        }
+    });
+}
+
+// ===================================
 // Cookie Consent
 // ===================================
 function initCookieConsent() {
@@ -291,5 +320,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize cookie consent
     initCookieConsent();
+
+    // Initialize FAQ accordion
+    initFAQ();
 });
 

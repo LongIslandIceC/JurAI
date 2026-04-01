@@ -4,67 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Downloads - JurAI</title>
+    <title>Insights - JurAI</title>
     <link rel="icon" type="image/png" href="assets/logo gold-taupe/jai_logo_taupe_transparent.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .downloads-page {
+        .insights-page {
             padding-top: 120px;
             padding-bottom: var(--spacing-xl);
             background: var(--color-bg);
             min-height: 100vh;
         }
-        .downloads-header {
+        .insights-header {
             text-align: center;
             margin-bottom: var(--spacing-lg);
         }
-        .downloads-header h1 {
+        .insights-header h1 {
             font-size: 2rem;
             font-weight: 600;
             color: var(--color-primary);
             margin-bottom: var(--spacing-sm);
         }
-        .downloads-header p {
+        .insights-header p {
             color: var(--color-text-light);
             font-size: 1.1rem;
         }
-        .downloads-grid {
+        .insights-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: 1fr;
             gap: var(--spacing-md);
-            max-width: 1000px;
+            max-width: 800px;
             margin: 0 auto;
         }
-        .download-card {
+        .insight-card {
             background: white;
             border-radius: 8px;
             padding: 30px;
             box-shadow: var(--shadow-sm);
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            transition: box-shadow 0.3s ease;
         }
-        .download-card:hover {
+        .insight-card:hover {
             box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
         }
-        .download-card h3 {
-            font-size: 1.1rem;
+        .insight-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .insight-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .insight-author-info h3 {
+            font-size: 1rem;
             font-weight: 600;
             color: var(--color-primary);
-            margin-bottom: 10px;
+            margin: 0;
         }
-        .download-card p {
+        .insight-author-info .insight-date {
+            font-size: 0.85rem;
             color: var(--color-text-light);
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            line-height: 1.6;
+            margin: 0;
         }
-        .download-card .btn {
+        .insight-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--color-accent);
+        }
+        .insight-content {
+            color: var(--color-text);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .insight-content p {
+            margin-bottom: 15px;
+        }
+        .insight-content p:last-child {
+            margin-bottom: 0;
+        }
+        .insight-link {
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            margin-top: 20px;
             padding: 10px 20px;
             background: var(--color-accent);
             color: white;
@@ -74,36 +104,26 @@
             font-weight: 500;
             transition: background 0.3s ease;
         }
-        .download-card .btn:hover {
+        .insight-link:hover {
             background: #96754d;
         }
-        .download-card .btn svg {
-            width: 18px;
-            height: 18px;
-        }
-        .download-section {
-            margin-bottom: var(--spacing-lg);
-        }
-        .download-section h2 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--color-accent);
-            margin-bottom: var(--spacing-md);
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--color-accent);
+        .insight-link svg {
+            width: 16px;
+            height: 16px;
         }
         @media (max-width: 768px) {
-            .downloads-page {
+            .insights-page {
                 padding-top: 100px;
             }
-            .downloads-header h1 {
+            .insights-header h1 {
                 font-size: 1.5rem;
             }
-            .downloads-grid {
-                grid-template-columns: 1fr;
-            }
-            .download-card {
+            .insight-card {
                 padding: 20px;
+            }
+            .insight-author img {
+                width: 40px;
+                height: 40px;
             }
         }
     </style>
@@ -166,78 +186,40 @@
         </div>
     </nav>
 
-    <!-- Downloads Content -->
-    <section class="downloads-page">
+    <!-- Insights Content -->
+    <section class="insights-page">
         <div class="container">
-            <div class="downloads-header">
-                <h1>Downloads</h1>
-                <p>Informationsmaterialien und Vertragsvorlagen</p>
+            <div class="insights-header">
+                <h1>Insights</h1>
+                <p>Neuigkeiten und Perspektiven</p>
             </div>
 
-            <div class="download-section">
-                <h2>Informationen</h2>
-                <div class="downloads-grid">
-                    <div class="download-card">
-                        <h3>JurAI One-Pager</h3>
-                        <p>Kompakte Übersicht über unser Angebot, unsere Leistungen und wie wir Kanzleien bei Legal AI unterstützen.</p>
-                        <a href="downloads/JurAI_OnePager.pdf" class="btn" download>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                <polyline points="7 10 12 15 17 10"/>
-                                <line x1="12" y1="15" x2="12" y2="3"/>
-                            </svg>
-                            PDF herunterladen
-                        </a>
+            <div class="insights-grid">
+                <!-- Insight 1 -->
+                <article class="insight-card">
+                    <div class="insight-author">
+                        <img src="assets/Chris.png" alt="Christopher Brennan">
+                        <div class="insight-author-info">
+                            <h3>Christopher Brennan</h3>
+                            <p class="insight-date">März 2026</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="download-section">
-                <h2>Vertragsvorlagen</h2>
-                <div class="downloads-grid">
-                    <div class="download-card">
-                        <h3>Executive Sparring</h3>
-                        <p>Beratungsvertrag für das Executive Sparring. Dreistündige Session für Partner und Entscheider.</p>
-                        <a href="contracts/vertrag-executive-sparring.html" class="btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14 2 14 8 20 8"/>
-                                <line x1="16" y1="13" x2="8" y2="13"/>
-                                <line x1="16" y1="17" x2="8" y2="17"/>
-                                <polyline points="10 9 9 9 8 9"/>
-                            </svg>
-                            Vertrag öffnen
-                        </a>
+                    <h2 class="insight-title">Verschiedene Wege zu Legal AI</h2>
+                    <div class="insight-content">
+                        <p>Legal AI entwickelt sich nicht entlang eines einzigen Pfades. Unterschiedliche Technologien, Strategien und Annahmen entstehen parallel – teils überlappend, teils konkurrierend, oft schwer vergleichbar.</p>
+                        <p>Einige Anbieter setzen auf spezialisierte Modelle für juristische Anwendungsfälle. Andere integrieren generische KI in bestehende Workflows. Wieder andere entwickeln vollständig neue Produkte, die traditionelle Arbeitsweisen grundlegend verändern.</p>
+                        <p>Für Kanzleien und Rechtsabteilungen bedeutet das: Es gibt nicht die eine richtige Lösung. Die Frage ist vielmehr, welcher Ansatz zur eigenen Organisation, den eigenen Mandaten und den eigenen Zielen passt.</p>
+                        <p>Diese Fragen diskutiere ich am 28. April auf der legalXchange in München gemeinsam mit Vertretern von Harvey, Noxtua, BRYTER, Legora und weiteren führenden Legal-AI-Anbietern.</p>
                     </div>
-                    <div class="download-card">
-                        <h3>Strategic Readiness</h3>
-                        <p>Beratungsvertrag für die Strategic Readiness. Strukturierte Analyse Ihrer Organisation.</p>
-                        <a href="contracts/vertrag-strategic-readiness.html" class="btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14 2 14 8 20 8"/>
-                                <line x1="16" y1="13" x2="8" y2="13"/>
-                                <line x1="16" y1="17" x2="8" y2="17"/>
-                                <polyline points="10 9 9 9 8 9"/>
-                            </svg>
-                            Vertrag öffnen
-                        </a>
-                    </div>
-                    <div class="download-card">
-                        <h3>Operational Enablement</h3>
-                        <p>Beratungsvertrag für das Operational Enablement. Einführung in den Arbeitsalltag.</p>
-                        <a href="contracts/vertrag-operational-enablement.html" class="btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14 2 14 8 20 8"/>
-                                <line x1="16" y1="13" x2="8" y2="13"/>
-                                <line x1="16" y1="17" x2="8" y2="17"/>
-                                <polyline points="10 9 9 9 8 9"/>
-                            </svg>
-                            Vertrag öffnen
-                        </a>
-                    </div>
-                </div>
+                    <a href="https://legalxchange.de" target="_blank" rel="noopener noreferrer" class="insight-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                        legalxchange.de
+                    </a>
+                </article>
             </div>
         </div>
     </section>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JurAI One-Pager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #2c2c2c;
+            background: white;
+            font-size: 10pt;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto;
+            background: white;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 8mm;
+            padding-bottom: 5mm;
+            border-bottom: 1px solid #8b7355;
+        }
+
+        .logo {
+            font-family: 'Times New Roman', serif;
+            font-size: 28pt;
+            font-weight: 400;
+            color: #8b7355;
+            letter-spacing: 0.1em;
+            margin-bottom: 2mm;
+        }
+
+        .tagline {
+            font-size: 11pt;
+            color: #8b7355;
+            font-weight: 400;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 6mm;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            font-weight: 600;
+            color: #8b7355;
+            margin-bottom: 2mm;
+        }
+
+        .section p {
+            text-align: justify;
+            margin-bottom: 2mm;
+            font-size: 9.5pt;
+            line-height: 1.5;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            font-weight: 600;
+        }
+
+        /* Team Section */
+        .team {
+            margin-bottom: 6mm;
+        }
+
+        .team-photos {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 25mm;
+            margin-bottom: 4mm;
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            width: 30mm;
+        }
+
+        .team-member-photo {
+            width: 24mm;
+            height: 24mm;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 2mm auto;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Christopher - Gesicht oben im Bild */
+        .team-member:first-child .team-member-photo img {
+            object-position: center 3%;
+        }
+
+        /* Sebastian - Gesicht weiter unten, skaliert */
+        .team-member:last-child .team-member-photo img {
+            object-position: center 60%;
+            transform: scale(1.6);
+        }
+
+        .team-member-name {
+            font-size: 8.5pt;
+            font-weight: 500;
+            color: #2c2c2c;
+            text-align: center;
+            width: 100%;
+        }
+
+        .team-text {
+            margin-top: 3mm;
+        }
+
+        .team-text p {
+            text-align: justify;
+            font-size: 9.5pt;
+            line-height: 1.5;
+        }
+
+        /* Solution List */
+        .solution-list {
+            list-style: none;
+            padding: 0;
+            margin: 2mm 0;
+        }
+
+        .solution-list li {
+            padding-left: 4mm;
+            position: relative;
+            margin-bottom: 1mm;
+            font-size: 9.5pt;
+        }
+
+        .solution-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8b7355;
+            font-weight: bold;
+        }
+
+        .solution-summary {
+            margin-top: 2mm;
+            font-size: 9.5pt;
+        }
+
+        /* Services */
+        .services p {
+            margin-bottom: 3mm;
+        }
+
+        .service-name {
+            font-weight: 600;
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            padding: 4mm;
+            margin: 6mm 0;
+            border-top: 1px solid #d4d2cf;
+            border-bottom: 1px solid #d4d2cf;
+        }
+
+        .cta p {
+            font-size: 9.5pt;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 4mm;
+            border-top: 1px solid #8b7355;
+            font-size: 9pt;
+            color: #8b7355;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 6mm;
+        }
+
+        .footer-links span {
+            display: flex;
+            align-items: center;
+            gap: 2mm;
+        }
+
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .page {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">JurAI</div>
+            <div class="tagline">Legal AI Beratung</div>
+        </header>
+
+        <!-- Warum dieses Thema jetzt relevant ist -->
+        <section class="section">
+            <h2 class="section-title">Warum dieses Thema jetzt relevant ist</h2>
+            <p>
+                Künstliche Intelligenz verändert die juristische Arbeit. Nicht irgendwann, sondern jetzt. Mandanten erwarten effizientere Prozesse, Wettbewerber setzen bereits entsprechende Tools ein. Die Frage ist nicht, ob Legal AI kommt. <span class="highlight">Die Frage ist, ob Sie sie steuern, oder ob sie bereits unkontrolliert in Ihrer Kanzlei stattfindet.</span>
+            </p>
+        </section>
+
+        <!-- Das Problem -->
+        <section class="section">
+            <h2 class="section-title">Das Problem</h2>
+            <p>
+                In den meisten Kanzleien passiert aktuell Folgendes: Mitarbeiter nutzen KI-Tools ohne Freigabe oder Kontrolle. Mandantendaten werden in externe Systeme eingegeben. Lizenzen werden bezahlt, ohne messbaren Nutzen. Entscheidungen werden getroffen, ohne zu wissen, ob sie haftungsrechtlich tragfähig sind. Und gleichzeitig kann niemand beantworten: Welche Tools werden tatsächlich genutzt? Wo entstehen Risiken? Ob sich die Investitionen rechnen? Das ist kein „Optimierungsthema". <span class="highlight">Das ist Kontrollverlust.</span> Solange das ungeklärt ist, ist Legal AI kein Wettbewerbsvorteil, sondern ein unkontrolliertes Risiko. <span class="highlight">Und Sie tragen die Verantwortung dafür.</span>
+            </p>
+        </section>
+
+        <!-- Wer wir sind -->
+        <section class="section team">
+            <h2 class="section-title">Wer wir sind</h2>
+            <div class="team-photos">
+                <div class="team-member">
+                    <div class="team-member-photo">
+                        <img src="../assets/Chris.png" alt="Christopher Brennan">
+                    </div>
+                    <div class="team-member-name">Christopher Brennan</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-member-photo">
+                        <img src="../assets/sebastian.png" alt="Sebastian Merkel">
+                    </div>
+                    <div class="team-member-name">Sebastian Merkel</div>
+                </div>
+            </div>
+            <div class="team-text">
+                <p>
+                    Wir haben Legal AI nicht nur beobachtet, wir haben sie mit aufgebaut und eingeführt. Als Juristen in einem der führenden juristischen Fachverlage Europas sind wir direkt an der Entwicklung und Implementierung von Legal-AI-Anwendungen beteiligt, sowohl auf Produktseite als auch in der praktischen Einführung bei Kanzleien und Unternehmen. <span class="highlight">Wir wissen, welche Lösungen funktionieren und welche in der Praxis scheitern.</span> Wir kennen nicht nur die Theorie, wir kennen die operative Realität.
+                </p>
+            </div>
+        </section>
+
+        <!-- Die Lösung -->
+        <section class="section">
+            <h2 class="section-title">Die Lösung</h2>
+            <p>Wir sorgen dafür, dass Legal AI in Ihrer Kanzlei kontrolliert, sinnvoll und wirtschaftlich eingesetzt wird. Konkret bedeutet das:</p>
+            <ul class="solution-list">
+                <li><span class="highlight">Transparenz</span> darüber, was bereits genutzt wird</li>
+                <li><span class="highlight">Klare Entscheidungen</span>, wo KI sinnvoll ist und wo nicht</li>
+                <li><span class="highlight">Strukturierte Einführung</span> in echte Arbeitsprozesse</li>
+                <li><span class="highlight">Verantwortlichkeiten & Governance</span>, die tragen</li>
+            </ul>
+            <p class="solution-summary"><span class="highlight">Die Lösung ist nicht „mehr KI", sondern funktionierende Anwendungen.</span></p>
+        </section>
+
+        <!-- Unsere Leistungen -->
+        <section class="section services">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <p>Je nach Ausgangslage und Zielsetzung gestalten wir unsere Zusammenarbeit individuell. Das <span class="service-name">Executive Sparring</span> ist eine dreistündige Session für Partner und Entscheider, die Orientierung brauchen: Wo stehen wir? Was ist realistisch? Welche Fragen müssen wir intern klären? Sie bekommen eine fundierte Einordnung, ohne Verkaufspitch, ohne Tool-Demo.</p>
+            <p>Die <span class="service-name">Strategic Readiness</span> geht tiefer: Wir analysieren Ihre Organisation, Ihre Datenlandschaft, Ihre Prozesse und identifizieren konkret, wo KI bei Ihnen Mehrwert bringt und wo nicht. Am Ende steht eine klare Entscheidungsgrundlage, keine PowerPoint-Theorie.</p>
+            <p>Das <span class="service-name">Operational Enablement</span> ist für Kanzleien, die Legal AI tatsächlich einführen wollen: Wir definieren Workflows, schulen Teams, etablieren Governance-Regeln und sorgen dafür, dass KI im Alltag funktioniert, kontrolliert und messbar. Produktneutral.</p>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta">
+            <p>Wenn Sie aktuell nicht genau wissen, wie Legal AI in Ihrer Kanzlei genutzt wird, dann ist es Zeit, das zu klären.</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <span>hello@juraiconsulting.com</span>
+                <span>|</span>
+                <span>0157 8700 4835</span>
+                <span>|</span>
+                <span>www.juraiconsulting.com</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
