@@ -291,6 +291,7 @@ a:hover {
 
 .btn-primary:hover {
     background-color: var(--color-accent-light);
+    color: white;
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
