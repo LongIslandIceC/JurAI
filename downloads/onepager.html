@@ -91,27 +91,35 @@
             margin-bottom: 6mm;
         }
 
-        .team-photos {
+        .team-inner {
             display: flex;
             flex-direction: row;
-            justify-content: center;
             align-items: flex-start;
-            gap: 25mm;
-            margin-bottom: 4mm;
+            gap: 6mm;
+        }
+
+        .team-photos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3mm;
+            flex-shrink: 0;
         }
 
         .team-member {
-            display: block;
-            width: 30mm;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
+            width: 28mm;
         }
 
         .team-member-photo {
-            width: 24mm;
-            height: 24mm;
+            width: 22mm;
+            height: 22mm;
             border-radius: 50%;
             overflow: hidden;
-            margin: 0 auto 2mm auto;
+            margin: 0 auto 1.5mm auto;
         }
 
         .team-member img {
@@ -141,7 +149,7 @@
         }
 
         .team-text {
-            margin-top: 3mm;
+            flex: 1;
         }
 
         .team-text p {
@@ -260,24 +268,26 @@
         <!-- Wer wir sind -->
         <section class="section team">
             <h2 class="section-title">Wer wir sind</h2>
-            <div class="team-photos">
-                <div class="team-member">
-                    <div class="team-member-photo">
-                        <img src="../assets/Chris.png" alt="Christopher Brennan">
+            <div class="team-inner">
+                <div class="team-photos">
+                    <div class="team-member">
+                        <div class="team-member-photo">
+                            <img src="../assets/Chris.png" alt="Christopher Brennan">
+                        </div>
+                        <div class="team-member-name">Christopher Brennan</div>
                     </div>
-                    <div class="team-member-name">Christopher Brennan</div>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-photo">
-                        <img src="../assets/sebastian.png" alt="Sebastian Merkel">
+                    <div class="team-member">
+                        <div class="team-member-photo">
+                            <img src="../assets/sebastian.png" alt="Sebastian Merkel">
+                        </div>
+                        <div class="team-member-name">Sebastian Merkel</div>
                     </div>
-                    <div class="team-member-name">Sebastian Merkel</div>
                 </div>
-            </div>
-            <div class="team-text">
-                <p>
-                    Wir haben Legal AI nicht nur beobachtet, wir haben sie mit aufgebaut und eingeführt. Als Juristen in einem der führenden juristischen Fachverlage Europas sind wir direkt an der Entwicklung und Implementierung von Legal-AI-Anwendungen beteiligt, sowohl auf Produktseite als auch in der praktischen Einführung bei Kanzleien und Unternehmen. <span class="highlight">Wir wissen, welche Lösungen funktionieren und welche in der Praxis scheitern.</span> Wir kennen nicht nur die Theorie, wir kennen die operative Realität.
-                </p>
+                <div class="team-text">
+                    <p>
+                        Wir haben Legal AI nicht nur beobachtet, wir haben sie mit aufgebaut und eingeführt. Als Juristen in einem der führenden juristischen Fachverlage Europas sind wir direkt an der Entwicklung und Implementierung von Legal-AI-Anwendungen beteiligt, sowohl auf Produktseite als auch in der praktischen Einführung bei Kanzleien und Unternehmen. <span class="highlight">Wir wissen, welche Lösungen funktionieren und welche in der Praxis scheitern.</span> Wir kennen nicht nur die Theorie, wir kennen die operative Realität.
+                    </p>
+                </div>
             </div>
         </section>
 
