@@ -441,6 +441,110 @@ section {
 }
 
 /* ===================================
+   Die Realität Section
+   =================================== */
+.realitaet {
+    background-color: var(--color-bg-light);
+    padding: var(--spacing-lg) 0;
+}
+
+.realitaet-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.realitaet-content p {
+    font-size: var(--font-size-md);
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.realitaet-keyline {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 2px solid var(--color-accent);
+}
+
+/* ===================================
+   So helfen wir Section
+   =================================== */
+.so-helfen-wir {
+    background-color: var(--color-bg);
+    padding: var(--spacing-lg) 0;
+}
+
+.helfen-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.helfen-content p {
+    font-size: var(--font-size-md);
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.helfen-cta {
+    text-align: center;
+    background: var(--color-bg-light);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.helfen-cta-text {
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ===================================
+   Final CTA Section
+   =================================== */
+.final-cta {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+    padding: var(--spacing-lg) 0;
+}
+
+.final-cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.final-cta-content p {
+    font-size: var(--font-size-lg);
+    color: white;
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.5;
+}
+
+.final-cta-content p:last-of-type {
+    margin-bottom: var(--spacing-md);
+}
+
+.final-cta .btn {
+    background: white;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.final-cta .btn:hover {
+    background: var(--color-bg);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ===================================
    About Section
    =================================== */
 .about {
@@ -983,6 +1087,61 @@ ul.team-cv li {
     border-color: var(--color-accent);
     color: var(--color-accent);
     background-color: rgba(139, 115, 85, 0.05);
+}
+
+/* Horizontal Service Card (Laufende Begleitung) */
+.service-card-horizontal {
+    width: 100%;
+    margin-top: var(--spacing-md);
+}
+
+.service-card-horizontal .service-card {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.service-card-horizontal .service-header {
+    min-height: auto;
+    flex-shrink: 0;
+}
+
+.service-card-horizontal .service-description {
+    min-height: auto;
+    margin: 0;
+}
+
+.service-card-horizontal .service-deliverables {
+    flex-direction: row;
+    flex-grow: 1;
+    gap: var(--spacing-md);
+    margin: 0;
+}
+
+.service-card-horizontal .service-deliverables li {
+    min-height: auto;
+    flex: 1;
+    font-size: var(--font-size-xs);
+}
+
+.service-card-horizontal .service-cta {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.service-card-horizontal .service-cta .btn {
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .service-card-horizontal .service-card {
+        flex-direction: column;
+    }
+
+    .service-card-horizontal .service-deliverables {
+        flex-direction: column;
+    }
 }
 
 /* ===================================
