@@ -47,3 +47,13 @@ temp/
 # Claude Code
 .claude/
 .playwright-mcp/
+
+# Interne Dateien - NICHT deployen (GitHub Pages liefert alles Getrackte aus!)
+CLAUDE.md
+FORMSPREE-SETUP.md
+README.md
+assets/contracts/
+assets/contracts 2/
+docs/
+Bilder/
+assets/_archive/

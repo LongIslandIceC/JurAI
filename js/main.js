@@ -23,25 +23,30 @@ const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 if (mobileMenuToggle) {
+    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+
     mobileMenuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+        const isOpen = navLinks.classList.toggle('active');
         mobileMenuToggle.classList.toggle('active');
+        mobileMenuToggle.setAttribute('aria-expanded', isOpen);
     });
+
+    const closeMenu = () => {
+        navLinks.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+    };
 
     // Close menu when clicking on a link
     const navLinkItems = document.querySelectorAll('.nav-links a');
     navLinkItems.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            mobileMenuToggle.classList.remove('active');
-        });
+        link.addEventListener('click', closeMenu);
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!nav.contains(e.target)) {
-            navLinks.classList.remove('active');
-            mobileMenuToggle.classList.remove('active');
+            closeMenu();
         }
     });
 }
@@ -169,7 +174,10 @@ window.addEventListener('scroll', debouncedHighlight);
 // ===================================
 // Apple-style Parallax Scroll Effects
 // ===================================
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 function appleParallaxEffect() {
+    if (prefersReducedMotion) return;
     const scrolled = window.pageYOffset;
 
     // Parallax effect for background dunes
@@ -259,46 +267,9 @@ function initFAQ() {
 }
 
 // ===================================
-// Cookie Consent
-// ===================================
-function initCookieConsent() {
-    const cookieConsent = document.getElementById('cookieConsent');
-    const acceptBtn = document.getElementById('cookieAccept');
-    const declineBtn = document.getElementById('cookieDecline');
-
-    if (!cookieConsent) return;
-
-    // Check if user has already made a choice
-    const consentGiven = localStorage.getItem('cookieConsent');
-
-    if (!consentGiven) {
-        // Show banner after a short delay
-        setTimeout(() => {
-            cookieConsent.classList.add('show');
-        }, 1000);
-    }
-
-    if (acceptBtn) {
-        acceptBtn.addEventListener('click', () => {
-            localStorage.setItem('cookieConsent', 'accepted');
-            cookieConsent.classList.remove('show');
-        });
-    }
-
-    if (declineBtn) {
-        declineBtn.addEventListener('click', () => {
-            localStorage.setItem('cookieConsent', 'declined');
-            cookieConsent.classList.remove('show');
-        });
-    }
-}
-
-// ===================================
 // Initialize on DOM Load
 // ===================================
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('JurAI Website loaded successfully');
-
     // Add initial animation to hero
     const heroContent = document.querySelector('.hero-content');
     if (heroContent) {
@@ -307,19 +278,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100);
     }
 
-    // Initialize parallax
-    appleParallaxEffect();
+    if (!prefersReducedMotion) {
+        // Set initial state for service cards BEFORE the first parallax pass,
+        // damit Karten im Viewport sofort wieder eingeblendet werden
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        });
 
-    // Set initial state for service cards
-    const serviceCards = document.querySelectorAll('.service-card');
-    serviceCards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    });
-
-    // Initialize cookie consent
-    initCookieConsent();
+        // Initialize parallax (blendet sichtbare Karten direkt ein)
+        appleParallaxEffect();
+    }
 
     // Initialize FAQ accordion
     initFAQ();
