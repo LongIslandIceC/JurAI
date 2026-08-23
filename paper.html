@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hinter dem Zauber: Künstliche Intelligenz für Juristen, einfach erklärt. Kostenloses Paper von Christopher Brennan zu KI-Grundlagen, Legal-AI-Anwendungen im Marktvergleich und dem rechtlichen Rahmen von Datenschutz bis AI Act. Stand Sommer 2026." />
+  <meta name="keywords" content="Künstliche Intelligenz für Juristen, KI für Juristen, Legal AI Paper, Legal AI Whitepaper, KI Grundlagen Juristen, AI Act Kanzlei, Legal AI Marktübersicht, Halluzination RAG Prompting" />
+  <title>Hinter dem Zauber – Künstliche Intelligenz für Juristen | Paper von Christopher Brennan</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hinter dem Zauber – Künstliche Intelligenz für Juristen, einfach erklärt" />
+  <meta property="og:description" content="Kostenloses Paper: KI-Grundlagen, Legal-AI-Anwendungen im Vergleich und der rechtliche Rahmen. Von Christopher Brennan, Stand Sommer 2026." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://juraiconsulting.com/paper.html" />
+  <meta property="og:image" content="https://juraiconsulting.com/assets/paper-og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Titelseite des Papers „Hinter dem Zauber. Künstliche Intelligenz für Juristen, einfach erklärt“ von Christopher Brennan" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="canonical" href="https://juraiconsulting.com/paper.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/logo gold-taupe/jai_logo_taupe_128.png" />
+  <link rel="apple-touch-icon" href="assets/logo gold-taupe/jai_logo_taupe_256.png" />
+  <link rel="stylesheet" href="css/styles.css?v=78.0" />
+
+  <!-- Schema.org: das Paper als eigenständiges Werk -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "@id": "https://juraiconsulting.com/paper.html#paper",
+    "name": "Hinter dem Zauber",
+    "alternateName": "Hinter dem Zauber. Künstliche Intelligenz für Juristen, einfach erklärt",
+    "headline": "Hinter dem Zauber. Künstliche Intelligenz für Juristen, einfach erklärt",
+    "description": "Ein Paper für Juristinnen und Juristen ohne Informatik-Vorbildung: die Mechanik moderner KI-Systeme, die Legal-AI-Anwendungen des Jahres 2026 im Vergleich und der rechtliche Rahmen von Datenschutz über Berufsrecht und AI Act bis zu Haftung und Urheberrecht.",
+    "inLanguage": "de",
+    "image": "https://juraiconsulting.com/assets/paper-cover.jpg",
+    "numberOfPages": 104,
+    "bookFormat": "https://schema.org/EBook",
+    "datePublished": "2026-08",
+    "url": "https://juraiconsulting.com/paper.html",
+    "isAccessibleForFree": true,
+    "license": "https://juraiconsulting.com/paper.html#nutzung",
+    "author": {
+      "@type": "Person",
+      "@id": "https://juraiconsulting.com/#christopher-brennan",
+      "name": "Christopher Brennan",
+      "jobTitle": "Volljurist, Manager Legal Tech",
+      "url": "https://juraiconsulting.com/#christopher-brennan",
+      "sameAs": ["https://www.linkedin.com/in/christopher-brennan-4819b6179/"]
+    },
+    "publisher": { "@id": "https://juraiconsulting.com/#organization" },
+    "about": [
+      "Künstliche Intelligenz",
+      "Legal Tech",
+      "Legal AI",
+      "EU AI Act",
+      "Rechtsinformatik"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Rechtsanwälte, Richter, Justiziare, Referendare"
+    },
+    "potentialAction": {
+      "@type": "ReadAction",
+      "target": "https://juraiconsulting.com/paper/download.html"
+    }
+  }
+  </script>
+
+  <style>
+    .paper-page {
+      padding-top: 140px;
+      padding-bottom: var(--spacing-lg);
+      background: var(--color-bg);
+    }
+
+    /* --- Kopf: Cover neben Titel --- */
+    .paper-hero {
+      max-width: 900px;
+      margin: 0 auto var(--spacing-lg);
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: var(--spacing-md);
+      align-items: center;
+    }
+    .paper-cover { margin: 0; }
+    .paper-cover img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--color-border);
+      border-radius: 3px;
+      box-shadow: 0 10px 30px rgba(44, 44, 44, 0.13);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .paper-cover a:hover img {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 38px rgba(44, 44, 44, 0.18);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .paper-cover img, .paper-cover a:hover img { transition: none; transform: none; }
+    }
+    .paper-facts {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--color-text-light);
+      letter-spacing: 0.02em;
+    }
+    .paper-eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      border: 1px solid var(--color-border);
+      border-radius: 100px;
+      padding: 6px 16px;
+      margin-bottom: var(--spacing-sm);
+    }
+    .paper-hero h1 {
+      font-size: 2.5rem;
+      line-height: 1.15;
+      letter-spacing: 0.02em;
+      margin-bottom: 12px;
+    }
+    .paper-subtitle {
+      font-size: 1.15rem;
+      color: var(--color-text-light);
+      font-weight: 300;
+      margin-bottom: var(--spacing-sm);
+    }
+    .paper-byline {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+    }
+    .paper-byline strong { color: var(--color-text); font-weight: 600; }
+
+    /* --- Zitat --- */
+    .paper-quote {
+      max-width: 720px;
+      margin: 0 auto var(--spacing-lg);
+      padding: var(--spacing-md);
+      background: var(--color-bg-light);
+      border-left: 3px solid var(--color-accent);
+      border-radius: 4px;
+    }
+    .paper-quote p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--color-text);
+      margin: 0;
+      font-style: italic;
+    }
+
+    /* --- Download --- */
+    .paper-download {
+      max-width: 720px;
+      margin: 0 auto var(--spacing-lg);
+      padding: var(--spacing-md);
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      text-align: center;
+    }
+    .paper-download h2 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+    .paper-download > p {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-sm);
+      line-height: 1.6;
+    }
+    .paper-download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 34px;
+      background: var(--color-accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .paper-download-btn:hover {
+      background: #96754d;
+      transform: translateY(-1px);
+    }
+    .paper-download-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .paper-meta {
+      margin-top: var(--spacing-sm);
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+    }
+
+    /* --- Textabschnitte --- */
+    .paper-section {
+      max-width: 720px;
+      margin: 0 auto var(--spacing-lg);
+    }
+    .paper-section h2 {
+      font-size: 1.35rem;
+      color: var(--color-accent);
+      margin-bottom: var(--spacing-sm);
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--color-accent);
+    }
+    .paper-section p {
+      font-size: 0.97rem;
+      line-height: 1.8;
+      color: var(--color-text);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    /* --- Inhaltsübersicht --- */
+    .paper-toc {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-sm);
+      margin-top: var(--spacing-sm);
+    }
+    .toc-part {
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 5px;
+      padding: 22px;
+    }
+    .toc-part .toc-label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+    .toc-part h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .toc-part p {
+      font-size: 0.85rem;
+      line-height: 1.65;
+      color: var(--color-text-light);
+      margin: 0;
+    }
+
+    /* --- Transparenz --- */
+    .paper-note {
+      max-width: 720px;
+      margin: 0 auto var(--spacing-lg);
+      padding: var(--spacing-md);
+      background: var(--color-bg-light);
+      border: 1px solid var(--color-border);
+      border-radius: 5px;
+    }
+    .paper-note h2 {
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+    }
+    .paper-note p {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--color-text-light);
+      margin-bottom: 12px;
+    }
+    .paper-note p:last-child { margin-bottom: 0; }
+
+    @media (max-width: 768px) {
+      .paper-page { padding-top: 100px; }
+      .paper-hero {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+        text-align: center;
+        /* min(), damit der Innenabstand des Containers nicht gesprengt wird */
+        max-width: min(420px, 100%);
+      }
+      .paper-cover { max-width: 210px; margin: 0 auto; }
+      .paper-hero h1 { font-size: 1.8rem; }
+      .paper-subtitle { font-size: 1rem; }
+      .paper-toc { grid-template-columns: 1fr; }
+      .paper-download, .paper-quote, .paper-note { padding: 20px; }
+      .paper-download-btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <img src="assets/logo-new3.svg" alt="JurAI" class="logo-text">
+          <img src="assets/logo gold-taupe/jai_logo_taupe_256.png" alt="" class="logo-icon">
+        </a>
+        <div class="nav-links">
+          <a href="index.html#about" class="nav-link">
+            <span class="nav-text">Über uns</span>
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </a>
+          <a href="index.html#leistungen" class="nav-link">
+            <span class="nav-text">Leistungen</span>
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="7" width="20" height="13" rx="2" ry="2"/>
+              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+              <line x1="12" y1="12" x2="12" y2="12.01"/>
+              <path d="M2 12h20"/>
+              <rect x="9" y="10" width="6" height="4" rx="0.5"/>
+            </svg>
+          </a>
+          <a href="paper.html" class="nav-link">
+            <span class="nav-text">Paper</span>
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+          </a>
+          <a href="insights.html" class="nav-link">
+            <span class="nav-text">Insights</span>
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </a>
+          <a href="index.html#faq" class="nav-link">
+            <span class="nav-text">FAQ</span>
+            <span class="nav-icon nav-icon-text">?</span>
+          </a>
+          <a href="index.html#kontakt" class="nav-link cta-button">
+            <span class="nav-text">Kontakt</span>
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Paper -->
+  <section class="paper-page">
+    <div class="container">
+
+      <div class="paper-hero">
+        <figure class="paper-cover">
+          <a href="paper/download.html" aria-label="Paper herunterladen">
+            <img src="assets/paper-cover.jpg"
+                 alt="Titelseite des Papers „Hinter dem Zauber. Künstliche Intelligenz für Juristen, einfach erklärt“"
+                 width="860" height="1216" loading="eager" />
+          </a>
+        </figure>
+        <div class="paper-intro">
+          <span class="paper-eyebrow">Paper &middot; Stand Sommer 2026</span>
+          <h1>Hinter dem Zauber</h1>
+          <p class="paper-subtitle">Künstliche Intelligenz für Juristen, einfach erklärt</p>
+          <p class="paper-byline">von <strong>Christopher Brennan</strong>, Volljurist &middot; München</p>
+          <p class="paper-facts">104 Seiten &middot; PDF &middot; kostenlos, ohne Formular</p>
+        </div>
+      </div>
+
+      <div class="paper-quote">
+        <p>„Hinter dem Zauber liegt eine erstaunlich schlichte Mechanik: Ein Sprachmodell
+        errechnet die wahrscheinlichste Fortsetzung eines Textes, nicht mehr. Aus dieser einen
+        Mechanik lässt sich jede Fähigkeit und jede Schwäche moderner KI ableiten, von der
+        verblüffenden Eloquenz bis zur erfundenen Fundstelle. Wer sie verstanden hat, liest jede
+        Schlagzeile über KI mit anderen Augen."</p>
+      </div>
+
+      <div class="paper-download" id="download">
+        <h2>Paper kostenlos herunterladen</h2>
+        <p>Kein Formular, keine Registrierung, keine E-Mail-Adresse. Laden, lesen, weitergeben.</p>
+        <a href="paper/download.html" class="paper-download-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          PDF herunterladen
+        </a>
+        <p class="paper-meta">PDF &middot; 104 Seiten &middot; Deutsch &middot; Stand August 2026</p>
+      </div>
+
+      <div class="paper-section">
+        <h2>Worum es geht</h2>
+        <p>Juristinnen und Juristen sollen über den Einsatz von KI entscheiden, ohne dass ihnen
+        jemand erklärt hätte, was in diesen Systemen eigentlich passiert. Genau diese Lücke
+        schließt dieses Paper. Es erklärt künstliche Intelligenz technisch korrekt, aber für ein
+        juristisches Publikum ohne Informatik-Vorbildung: Jeder Fachbegriff wird bei seiner
+        Erstnennung eingeführt, jede Vereinfachung als solche gekennzeichnet, und wo eine
+        Analogie bricht, steht das im Text.</p>
+        <p>Ziel ist es, Sie zu mündigen Entscheidern zu machen. Nach der letzten Seite sollen Sie
+        wissen, was sich hinter dem Zauber jedes technischen Begriffs verbirgt und wie Sie
+        künstliche Intelligenz in Ihrem beruflichen Alltag sinnvoll einsetzen können. Nicht, weil
+        Ihnen jemand ein Produkt empfohlen hat, sondern weil Sie die Mechanik verstehen.</p>
+      </div>
+
+      <div class="paper-section">
+        <h2>Inhalt</h2>
+        <div class="paper-toc">
+          <div class="toc-part">
+            <span class="toc-label">Teil A</span>
+            <h3>Was ist künstliche Intelligenz?</h3>
+            <p>KI, Machine Learning und Deep Learning, neuronale Netzwerke, die
+            Transformer-Architektur und der Gedanke der Aufmerksamkeit. Warum die schlichte
+            Mechanik der Wortvorhersage bahnbrechend war.</p>
+          </div>
+          <div class="toc-part">
+            <span class="toc-label">Teil B</span>
+            <h3>Die Begriffe, die Sie einordnen müssen</h3>
+            <p>Token, Training und Inferenz, Pre-Training und Fine-Tuning, Halluzination und ihre
+            Eindämmung, Temperatur, RAG, Prompting, Reasoning-Modelle, agentische Systeme, Bias,
+            Prompt Injection und Datenabfluss.</p>
+          </div>
+          <div class="toc-part">
+            <span class="toc-label">Teil C</span>
+            <h3>Legal-AI-Anwendungen im Vergleich</h3>
+            <p>Von Harvey, Legora und CoCounsel über BEAMON, Prime Legal AI, Libra und
+            Beck-Noxtua bis zu Vertragsarbeit, Recherche, Dokumentenautomatisierung und
+            Kanzleisoftware. Dazu die Allzweck-Modelle als Baseline und was Benchmarks taugen.</p>
+          </div>
+          <div class="toc-part">
+            <span class="toc-label">Teil D</span>
+            <h3>Rechtlicher Rahmen und Resümee</h3>
+            <p>Datenschutz, Berufsrecht und Verschwiegenheit, AI Act, Haftung und Urheberrecht.
+            Abschließend, wie sich solche Systeme praktisch einsetzen lassen, und eine vorsichtige
+            Prognose.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper-note" id="nutzung">
+        <h2>Transparenz und Nutzung</h2>
+        <p>Der Autor ist Volljurist und Manager Legal Tech beim Verlag C.H.Beck und hat dort an
+        den juristischen KI-Systemen beck-chat und Beck-Noxtua mitgearbeitet. Das steht hier,
+        damit Sie es beim Lesen mitdenken können. Alles im Paper beruht auf öffentlich
+        zugänglichen Quellen und eigener Praxis; über sämtliche Produkte, Systeme und Unternehmen
+        wird nach demselben Maßstab berichtet.</p>
+        <p>Die unveränderte Weitergabe dieses PDF ist gestattet und ausdrücklich erwünscht. Jede
+        Bearbeitung, Übersetzung oder kommerzielle Verwertung bedarf der Zustimmung des Autors.
+        &copy; 2026 Christopher Brennan.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="service-detail">
+    <div class="container">
+      <div class="service-detail-content">
+        <div class="cta-section">
+          <h2>Vom Verstehen zum Einsatz</h2>
+          <p>Das Paper erklärt die Technik. Wenn es darum geht, KI in Ihrer Kanzlei oder
+          Rechtsabteilung tatsächlich einzuführen, sprechen wir am besten direkt.</p>
+          <a href="index.html#kontakt" class="btn btn-primary">Erstgespräch vereinbaren</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo"><p>JurAI</p></div>
+        <div class="footer-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 JurAI. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=11.0"></script>
+</body>
+</html>

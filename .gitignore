@@ -51,6 +51,9 @@ temp/
 # Interne Dateien - NICHT deployen (GitHub Pages liefert alles Getrackte aus!)
 CLAUDE.md
 FORMSPREE-SETUP.md
+ANALYTICS-SETUP.md
+js/analytics.js
+paper-stats.sh
 README.md
 assets/contracts/
 assets/contracts 2/
