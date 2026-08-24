@@ -4,7 +4,8 @@
 User-agent: *
 Allow: /
 
-# Zaehlseite des Paper-Downloads: reine Messstelle, kein Inhalt
+# Zaehlseite des Downloads: reine Messstelle, kein Inhalt
+Disallow: /hinter-dem-zauber/download.html
 Disallow: /paper/download.html
 
 

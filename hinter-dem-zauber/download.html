@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Download startet &ndash; Hinter dem Zauber | JurAI</title>
+
+  <!-- ======================================================================
+       Zaehlstelle des Downloads.
+
+       Das PDF liegt als Release-Asset im GitHub-Repository der Website.
+       GitHub zaehlt jeden Abruf serverseitig mit; die Zahl laesst sich
+       jederzeit ueber die GitHub-API abfragen. Das braucht keinen weiteren
+       Dienst, keinen Account, kein Cookie und keine Einwilligung, und es
+       laesst sich von Adblockern nicht unterdruecken.
+
+       Diese Seite existiert, damit der geteilte Link auf der eigenen Domain
+       liegt und eine neue Fassung nur hier eingetragen werden
+       muss, nicht an jeder verlinkenden Stelle.
+       ====================================================================== -->
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/css/styles.css?v=78.0" />
+
+  <style>
+    .dl-wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacing-md);
+      background: var(--color-bg);
+      text-align: center;
+    }
+    .dl-card {
+      max-width: 480px;
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: var(--spacing-lg) var(--spacing-md);
+    }
+    .dl-card h1 { font-size: 1.4rem; margin-bottom: 12px; }
+    .dl-card p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-sm);
+    }
+    .dl-spinner {
+      width: 34px; height: 34px;
+      margin: 0 auto var(--spacing-sm);
+      border: 3px solid var(--color-bg-dark);
+      border-top-color: var(--color-accent);
+      border-radius: 50%;
+      animation: dlSpin 0.9s linear infinite;
+    }
+    @keyframes dlSpin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) {
+      .dl-spinner { animation: none; border-top-color: var(--color-border); }
+    }
+    .dl-actions {
+      display: flex; flex-direction: column;
+      gap: 10px; align-items: center;
+      margin-top: var(--spacing-sm);
+    }
+    .dl-manual {
+      color: var(--color-accent);
+      font-weight: 500;
+      text-decoration: underline;
+      font-size: 0.92rem;
+    }
+    .dl-back { font-size: 0.85rem; color: var(--color-text-light); text-decoration: none; }
+    .dl-back:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="dl-wrap">
+    <div class="dl-card">
+      <div class="dl-spinner" id="dl-spinner" aria-hidden="true"></div>
+      <h1 id="dl-title">Ihr Download startet</h1>
+      <p id="dl-text" aria-live="polite">
+        „Hinter dem Zauber &ndash; Künstliche Intelligenz für Juristen, einfach erklärt“
+        wird geladen. Das dauert nur einen Moment.
+      </p>
+      <div class="dl-actions">
+        <a id="dl-link"
+           href="https://github.com/LongIslandIceC/JurAI/releases/download/paper-2026-08/Hinter-dem-Zauber-KI-fuer-Juristen.pdf"
+           class="dl-manual">Download nicht gestartet? Hier klicken</a>
+        <a href="/hinter-dem-zauber/" class="dl-back">Zurück zu „Hinter dem Zauber“</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      var link = document.getElementById('dl-link');
+      if (!link) return;
+
+      window.setTimeout(function () {
+        window.location.href = link.href;
+      }, 400);
+
+      // Der Browser bleibt beim Dateidownload auf dieser Seite stehen. Damit
+      // hier nicht dauerhaft ein Spinner dreht, wird die Meldung danach ruhig
+      // gestellt. Der manuelle Link bleibt als Rueckfallebene sichtbar.
+      window.setTimeout(function () {
+        var sp = document.getElementById('dl-spinner');
+        var ti = document.getElementById('dl-title');
+        var tx = document.getElementById('dl-text');
+        if (sp) sp.style.display = 'none';
+        if (ti) ti.textContent = 'Download gestartet';
+        if (tx) tx.textContent = 'Viel Freude beim Lesen. Falls nichts angekommen ist, '
+                               + 'nutzen Sie bitte den Link darunter.';
+      }, 2600);
+    })();
+  </script>
+</body>
+</html>
